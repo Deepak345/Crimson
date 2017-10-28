@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -13,16 +14,36 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+
+    <!--  stylesheets of template -->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="styles/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="styles/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="styles/style.css">
+
     <!-- endbuild -->
-  </head>
-  <body ng-app="clientApp">
+</head>
+
+<body ng-app="clientApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here --> <!--<a ng-href="#!about"> -->
+    <!-- Add your site or application content here -->
+    <!--<a ng-href="#!about"> -->
     <div class="header">
-     
+
     </div>
 
     <section class="container" ng-view>
@@ -30,21 +51,23 @@
     </section>
 
     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the illuminati</p>
-      </div>
+        <div class="container">
+            <p><span class="glyphicon glyphicon-heart"></span> from the illuminati</p>
+        </div>
     </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+        ! function(A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -57,21 +80,25 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        
+    <!-- js of template -->
+    <!--<script src="js/owl.carousel.min.js"></script>-->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src = "scripts/services/usersession.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src = "scripts/controllers/useroptions.js"></script>
-        <script src="scripts/controllers/upcomingevents.js"></script>
-        <script src="scripts/controllers/signup.js"></script>
-        <script src="scripts/controllers/banksignup.js"></script>
-        <script src="scripts/controllers/organizationsignup.js"></script>
-        <script src="scripts/controllers/regforbank.js"></script>
-        <script src="scripts/controllers/regfororg.js"></script>
-        <script src="scripts/controllers/proximalbanks.js"></script>
-        <!-- endbuild -->
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/usersession.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/useroptions.js"></script>
+    <script src="scripts/controllers/upcomingevents.js"></script>
+    <script src="scripts/controllers/signup.js"></script>
+    <script src="scripts/controllers/banksignup.js"></script>
+    <script src="scripts/controllers/organizationsignup.js"></script>
+    <script src="scripts/controllers/regforbank.js"></script>
+    <script src="scripts/controllers/regfororg.js"></script>
+    <script src="scripts/controllers/proximalbanks.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
