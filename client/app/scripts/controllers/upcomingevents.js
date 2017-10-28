@@ -14,7 +14,7 @@ angular.module('clientApp')
     $scope.events = res.data;
   });
 
-  $scope.saveEvent = function(id) {
+  $scope.saveEvent = function(id) { 
     console.log(id);
     $scope.eventId = id;
   };

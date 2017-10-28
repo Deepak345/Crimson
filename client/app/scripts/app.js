@@ -25,7 +25,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/upcomingcamps', {
+      .when('/upcomingevents', {
         templateUrl: 'views/upcomingevents.html',
         controller: 'UpcomingeventCtrl',
         controllerAs: 'upev'
