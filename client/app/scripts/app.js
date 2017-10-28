@@ -35,6 +35,11 @@ angular
         controller: 'ProximalCtrl',
         controllerAs: 'proxcamp'
       })
+      .when('/proximalbanksdetails', {
+        templateUrl: 'views/proximalbanksdetail.html',
+        controller: 'ProximaldetCtrl',
+        controllerAs: 'proxdetcamp'
+      })
       .when('/useroptions', {
         templateUrl: 'views/useroptions.html',
         controller: 'UseropCtrl',

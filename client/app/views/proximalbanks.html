@@ -1,1 +1,24 @@
-<p>{{proxcamp.text}}</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Sl No</td>
+            <td>Name</td>
+            <td>Address</td>
+            <td>State</td>           
+            <td>Contact No.</td>
+            <td>Nodal Officer</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="bank in bankList">
+        <td>{{bank[0]}}</td>
+        <td><a ng-click = "proxcamp.getMoreDetails(bank)">{{bank[1]}}</a></td>
+        <td>{{bank[5]}}</td>
+        <td>{{bank[2]}}</td>
+        <td>{{bank[8]}}</td>
+        <td>{{bank[13]}}</td>
+        <td>{{bank[11]}}</td>
+    </tr>
+    </tbody>
+</table>
