@@ -13,12 +13,13 @@ angular.module('clientApp')
             currentUser.contact = user.contact ;
             currentUser.email = user.email ;
             currentUser.address = user.address ;
+            currentUser.userType = user.userType ;
         },
         checkSession : function(){
             return currentUser.isLoggedIn ;
         },
         getUserDetails : function(){
             return currentUser; 
-        }
+        } 
     }
 });
