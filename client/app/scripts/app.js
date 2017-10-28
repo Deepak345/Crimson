@@ -55,6 +55,11 @@ angular
         controller: 'OrgsignupCtrl',
         controllerAs: 'orgsignup'
       })
+      .when('/sendmails', {
+        templateUrl: 'views/sendmails.html',
+        controller: 'SendmailCtrl',
+        controllerAs: 'sendmail'
+      })
       .when('/banksignup', {
         templateUrl: 'views/banksignup.html',
         controller: 'BanksignupCtrl',
