@@ -1,3 +1,4 @@
+var mongoose = require('mongoose');
 var EventModel = require('../models/event');
 var DonorModel = require('../models/donor');
 
@@ -29,21 +30,25 @@ var getAllEvents = function(req, res) {
 };
 
 var registerToEvent = function(req, res) {
+    console.log(req.body);
     DonorModel.find({ $text: { $search: req.body.donor.email } }, function(err, doc) {
         if(err) throw err;
-        if(!doc) {
+        console.log("Doc : ", doc);
+        if(doc.length === 0) {
             console.log("Donor doesnt exist");
             var newDonor = new DonorModel(req.body.donor);
-            newDonor.save();
+            newDonor.save(function(err, doc) {
+                EventModel.update({ _id: mongoose.Schema.Types.ObjectId(req.body.eventId) },
+                { $push: { donors: doc._id } },
+                function(err, doc) {
+                   if(err) throw err;
+                   res.json(doc);
+               });
+            });
         } else {
             console.log("Donor Already Exists");
+            res.json(doc);
         }
-    });
-    EventModel.update({ _id: mongoose.Schema.Types.ObjectId(req.body.eventId) },
-     { $push: { donors: mongoose.Schema.Types.ObjectId(req.body.donor.id) } },
-     function(err, doc) {
-        if(err) throw err;
-        res.json(doc);
     });
 };
 
