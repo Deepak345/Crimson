@@ -18,7 +18,7 @@
     "grunt-contrib-watch": "^0.6.1",
     
     
-    // we can create an instance as well
+ 
     "grunt-filerev": "^2.1.2",
     "grunt-google-cdn": "^0.4.3",
     "grunt-jscs": "^1.8.0",

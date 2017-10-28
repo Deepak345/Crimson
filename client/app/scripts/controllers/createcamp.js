@@ -7,7 +7,9 @@ angular.module('clientApp')
   }*/
   $scope.event = {};
   
-  
-  $scope.event.conductor = { "typeOf" : userservice.getUserDetails().userType , "details" : userservice.getUserDetails().id};
+  $scope.submit = function(event){
+    event.conductor = { "typeOf" : userservice.getUserDetails().userType , "details" : userservice.getUserDetails().id};
+    console.log(event);
+  }
   
 });
