@@ -8,6 +8,6 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('MainCtrl', function (userservice) {
-    
-  });
+  .controller('MainCtrl', function (userservice ) {
+
+});
