@@ -6,16 +6,16 @@ var eventSchema = new Schema({
     venue: { type: String },
     date: { type: String },
     time: { type: String },
-    isOver: { type: String },
+    isOver: { type: Boolean },
     content: { type: String },
+    donors: [{
+        type: Schema.Types.ObjectId,
+        ref: 'donor'
+    }],
     conductor: { 
         typeOf: { type: String, enum: ["Organization", "Blood Bank"] },
-        details: { type: mongoose.Schema.Types.ObjectId }
-     },
-    donors: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'donor'
-    }]
+        details: { type: Schema.Types.ObjectId }
+     }
 });
 
 var eventModel = mongoose.model('event', eventSchema);

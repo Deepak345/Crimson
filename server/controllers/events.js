@@ -35,13 +35,17 @@ var registerToEvent = function(req, res) {
         if(err) throw err;
         console.log("Doc : ", doc);
         if(doc.length === 0) {
-            console.log("Donor doesnt exist");
+            console.log("Donor doesnt exist, Creating new donor.");
             var newDonor = new DonorModel(req.body.donor);
             newDonor.save(function(err, doc) {
+                if(err) throw err;
+                console.log(doc._id);
+                console.log();
                 EventModel.update({ _id: mongoose.Schema.Types.ObjectId(req.body.eventId) },
-                { $push: { donors: doc._id } },
+                { $push: { donors: mongoose.Schema.Types.ObjectId(doc._id) } },
                 function(err, doc) {
                    if(err) throw err;
+                   console.log("Updated: ", doc);
                    res.json(doc);
                });
             });

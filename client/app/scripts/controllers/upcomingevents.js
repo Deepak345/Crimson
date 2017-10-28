@@ -12,7 +12,7 @@ angular.module('clientApp')
   $http.get('/getallevents').then(function(res) {
     console.log(res);
     $scope.events = res.data;
-  });
+  }); 
 
   $scope.saveEvent = function(id) { 
     console.log(id);
