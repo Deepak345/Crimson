@@ -11,6 +11,7 @@ angular.module('clientApp')
             currentUser.name = user.name ;
             currentUser.contact = user.contact ;
             currentUser.email = user.email ;
+            currentUser.address = user.address ;
         },
         checkSession : function(){
             return currentUser.isLoggedIn ;
