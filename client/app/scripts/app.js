@@ -9,6 +9,7 @@
  * Main module of the application.
  */
 angular
+
     .module('clientApp', [
         'ngRoute',
         'ngSanitize'

@@ -6,7 +6,7 @@
             <li><b>Date :</b> {{ event.date }}</li>
             <li><b>Time :</b> {{ event.time }}</li>
         </ul>
-        <button class="btn btn-primary" ng-click="register(event._id)" data-toggle="modal" data-target="#modalForm">Register</button>
+        <button class="btn btn-primary" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#modalForm">Register</button>
     </div>
 </div>
 
@@ -22,30 +22,51 @@
         </div>
         <div class="modal-body">
             <div class="row">
-                <div class="form-group col-lg-12 col-lg-12 col-lg-12 col-lg-12">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <label>Full Name</label>
                     <input type="text" class="form-control" ng-model="donor.name">
+                </div>
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label>Email</label>
+                    <input type="email" class="form-control" ng-model="donor.email">
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" class="form-control" ng-model="donor.name">
+                <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <label>Age</label>
+                    <input type="text" class="form-control" ng-model="donor.age"> 
                 </div>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" class="form-control" ng-model="donor.name">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label>Gender</label>
+                    <select class="form-control" ng-model="donor.gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <label>Blood Group</label>
+                    <select class="form-control" ng-model="donor.bloodGrp">
+                        <option>A+ve</option>
+                        <option>A-ve</option>
+                        <option>B+ve</option>
+                        <option>B-ve</option>
+                        <option>AB+ve</option>
+                        <option>AB-ve</option>
+                        <option>O+ve</option>
+                        <option>O-ve</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" class="form-control" ng-model="donor.name">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label>Contact</label>
+                    <input type="text" class="form-control" ng-model="donor.contact">
                 </div>
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="register()">Submit</button>
         </div>
         </div>
     
