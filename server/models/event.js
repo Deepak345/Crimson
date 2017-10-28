@@ -8,7 +8,7 @@ var eventSchema = new Schema({
     isOver: { type: String },
     content: { type: String },
     conductor: { 
-        typeOf: { type: String, enum: ["org", "bank"] },
+        typeOf: { type: String, enum: ["Organization", "Blood Bank"] },
         details: { type: mongoose.Schema.Types.ObjectId }
      },
     donors: [{
