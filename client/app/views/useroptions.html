@@ -1,9 +1,9 @@
-<input type = "text" class = "form-control" placeholder="Enter username"/>
-<input type = "password" class = "form-control" placeholder="Enter password"/>
+<input type = "text" class = "form-control" placeholder="Enter username" ng-model = "userop.username"/>
+<input type = "password" class = "form-control" placeholder="Enter password" ng-model = "userop.password" />
 <p>User Type</p>
-<select>
+<select ng-model="userop.userType">
     <option>Organization</option>
     <option>Blood Bank/option>
 </select>
-<button class = "btn btn-primary">Log in</button>
+<button class = "btn btn-primary" ng-click = "userop.userLogin(userop.username,userop.password,userop.usertype)">Log in</button>
 <a href = "#!signup">Register here</a>
