@@ -1,10 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var index = require('../controllers/index');
-var getAllEvents = require('../controllers/events');
+var events = require('../controllers/events');
+//var orgs = require('../controllers/orgs');
+//var donors = require('../controllers/donors');
 
 //router.get('/', index);
 
-router.get('/getallevents', getAllEvents);
+router.get('/createevent', events.createNewEvent);
+
+router.get('/getallevents', events.getAllEvents);
+
+router.post('/registertoevent', events.registerToEvent);
+
 
 module.exports = router;
