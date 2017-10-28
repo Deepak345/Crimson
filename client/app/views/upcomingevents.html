@@ -1,1 +1,53 @@
-<p>{{upev.text}}</p>
+<div class="panel panel-default" ng-repeat="event in events">
+    <div class="panel-heading">{{ event.name }}</div>
+    <div class="panel-body">
+        <ul>
+            <li><b>Venue :</b> {{ event.venue }}</li>
+            <li><b>Date :</b> {{ event.date }}</li>
+            <li><b>Time :</b> {{ event.time }}</li>
+        </ul>
+        <button class="btn btn-primary" ng-click="register(event._id)" data-toggle="modal" data-target="#modalForm">Register</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modalForm" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Register For Event</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="form-group col-lg-12 col-lg-12 col-lg-12 col-lg-12">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" ng-model="donor.name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" ng-model="donor.name">
+                </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" ng-model="donor.name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" ng-model="donor.name">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+        </div>
+    
+    </div>
+</div>

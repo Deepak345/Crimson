@@ -35,6 +35,11 @@ angular
         controller: 'ProximalCtrl',
         controllerAs: 'proxcamp'
       })
+      .when('/proximalbanksdetails', {
+        templateUrl: 'views/proximalbanksdetail.html',
+        controller: 'ProximaldetCtrl',
+        controllerAs: 'proxdetcamp'
+      })
       .when('/useroptions', {
         templateUrl: 'views/useroptions.html',
         controller: 'UseropCtrl',
@@ -64,6 +69,21 @@ angular
         templateUrl: 'views/regfororg.html',
         controller: 'OrgregCtrl',
         controllerAs: 'orgreg'
+      })
+      .when('/sharedlink/:id', {
+        templateUrl: 'views/sharedlink.html',
+        controller: 'LinkCtrl',
+        controllerAs: 'link'
+      })
+      .when('/orgdashboard', {
+        templateUrl: 'views/orgdashboard.html',
+        controller: 'OrgdashCtrl',
+        controllerAs: 'orgdash'
+      })
+      .when('/createcamp', {
+        templateUrl: 'views/createcamp.html',
+        controller: 'CreatecampCtrl',
+        controllerAs: 'createcamp'
       })
       .otherwise({
         redirectTo: '/'
