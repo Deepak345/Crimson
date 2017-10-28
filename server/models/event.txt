@@ -1,0 +1,26 @@
+[
+    {
+        name: "Blood Donation Camp-By Kalinga Hospital",
+        venue: "Kalinga Hospital, BBSR",
+        time: "10am to 3pm",
+        isOver: false,
+        content: "klklslakskdjasjdkasdalkjhfdlahalsdakdjsahjkasjdhsalsadkdbkfaskdlasfadjaksjhldajdghakljshldaflashdlsadhks",
+        conductor: { 
+            typeOf: "org",
+            details: "bla"
+        },
+        donors: []
+    },
+    {
+        name: "Blood Donation Camp-Budha Park Association",
+        venue: "Buddha Park, BBSR",
+        time: "10am to 1pm",
+        isOver: false,
+        content: "klklslakskdjasjdkasdalkjhfdlahalsdakdjsahjkasjdhsalsadkdbkfaskdlasfadjaksjhldajdghakljshldaflashdlsadhks",
+        conductor: { 
+            typeOf: "org",
+            details: "bla bla"
+        },
+        donors: []
+    }
+]
