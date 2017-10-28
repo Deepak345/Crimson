@@ -7,7 +7,7 @@ var events = require('../controllers/events');
 
 //router.get('/', index);
 
-router.get('/createevent', events.createNewEvent);
+router.post('/createevent', events.createNewEvent);
 
 router.get('/getallevents', events.getAllEvents);
 
