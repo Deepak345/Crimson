@@ -1,34 +1,81 @@
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+
+        <div class="row">
+            <div class="col-sm-2 col-xs-12">
+                <div id="gtco-logo">
+                    <h1><a href="#!main">CRIMSON</a></h1>
+                </div>
+            </div>
+
+            <div class="col-xs-10 text-right menu-1">
+                <ul>
+                    <li><a href="#!main">Home</a></li>
+                    <li><a href="#!useroptions">Conduct a blood Camp</a></li>
+                    <li><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
+                    <li><a href="#!proximalbanks">Blood Banks Near You</a></li>
+                    <li><a href="#">Logout <span class="glyphicon glyphicon-log-in"></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<br><br>
+
+<div class="col-sm-2"></div>
 <div class="row ng-cloak">
     <div class="col-sm-6" id="signupbar">
+        <h3 class="text-center">Create a Blood Donation Camp</h3>
+        <div class="form-group form-group-sm">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Name" name="username" ng-model="event.name">
+        </div>
 
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" placeholder="Enter Name" name="username" ng-model = "event.name">
-            </div>
-            
-            <div class="form-group">
-                <label for="date">Date:</label>
-                <input type="date" class="form-control" ng-model="event.date" placeholder="Enter date" name="date">
-            </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control" ng-model="event.date" placeholder="Enter date" name="date">
+        </div>
 
-            <div class="form-group">
-                <label for="venue">Venue:</label>
-                <input type="text" class="form-control" ng-model="event.venue" placeholder="Enter venue" name="venue">
-            </div>
+        <div class="form-group form-group-sm">
+            <label for="venue">Venue:</label>
+            <input type="text" class="form-control" ng-model="event.venue" placeholder="Enter venue" name="venue">
+        </div>
 
-            <div class="form-group">
-                <label for="venue">Timing:</label>
-                <input type="text" class="form-control" ng-model="event.time" placeholder="Enter time" name="time">
-            </div>
+        <div class="form-group form-group-sm">
+            <label for="venue">Timing:</label>
+            <input type="text" class="form-control" ng-model="event.time" placeholder="Enter time" name="time">
+        </div>
 
-            <div class="form-group">
-                <label for="content">Content:</label>
-                <textarea rows="5" type="text" class="form-control" ng-model="event.content" placeholder="Enter content" name="content">
+        <div class="form-group form-group-sm">
+            <label for="content">Content:</label>
+            <textarea type="text" class="form-control" ng-model="event.content" placeholder="Enter content" name="content">
                 </textarea>
-            </div>
-            
-            <button class = "btn btn-primary btn-block" ng-click = "submit(event)">Submit</button>
-            
-    </div> 
-   
+        </div>
+
+        <button class="btn btn-primary btn-block" style="font-size: 18px;" ng-click="submit(event)">Submit</button>
+
+    </div>
+
 </div>
+<div class="col-sm-2"></div>
+<br><br>
+
+<footer id="gtco-footer" class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 style="color: white;">CRIMSON</h3>
+            <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 gtco-footer-subscribe">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</footer>
