@@ -1,12 +1,13 @@
 var mongoose = require('mongoose');
 var EventModel = require('../models/event');
 var DonorModel = require('../models/donor');
+var BankModel = require('../models/bank');
 
 var createNewEvent = function(req, res) {
     var newEvent = new EventModel(req.body.event);
     newEvent.save(function(err, doc) {
         if(err) throw err;
-        if(doc.conductor.typeOf === "org") {
+        if(doc.conductor.typeOf === "Organization") {
             OrgModel.update({ _id: doc.conductor.details }, { $push: { events:  doc._id} }, function(err, doc) {
                 if(err) throw err;
                 console.log("Organisation Events Array updated!");
