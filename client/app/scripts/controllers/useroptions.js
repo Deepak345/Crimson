@@ -7,7 +7,7 @@ angular.module('clientApp')
   this.userLogin = function(name , pwd , type){
     if(name === "test" && pwd === "password"){
       userservice.userType = this.userType ;
-      userservice.storeInfo({"userid" : "test" , "name" : "Zairza" , "contact" : "9574647" , "address" : "101 B , Keshari Enclave" , "email" : "info@zairza.in" , "id" : "100" , "userType" : })
+      userservice.storeInfo({"userid" : "test" , "name" : "Zairza" , "contact" : "9574647" , "address" : "101 B , Keshari Enclave" , "email" : "info@zairza.in" , "id" : "100" , "userType" : "Organization"})
       $location.path("orgdashboard");
     }else{
       this.username = null ;

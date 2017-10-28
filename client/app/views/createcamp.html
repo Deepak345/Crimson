@@ -2,16 +2,27 @@
     <div class="col-sm-6" id="signupbar">
 
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" 
-                ng-model = "user.userid" required>
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" placeholder="Enter Name" name="username" ng-model = "event.name">
             </div>
             
             <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd"
-                ng-model="user.password" placeholder="Enter password" name="pwd" required>
+                <label for="venue">Venue:</label>
+                <input type="text" class="form-control" ng-model="event.venue" placeholder="Enter venue" name="venue">
             </div>
+
+            <div class="form-group">
+                <label for="venue">Timing:</label>
+                <input type="text" class="form-control" ng-model="event.time" placeholder="Enter time" name="time">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea type="text" class="form-control" ng-model="event.content" placeholder="Enter content" name="content">
+                </textarea>
+            </div>
+            
+            <button class = "btn btn-primary btn-block" ng-click = "submit(event)">Submit</button>
             
     </div>
    
