@@ -34,7 +34,7 @@
             <div class="col-xs-10 text-right menu-1">
                 <ul>
                     <li class="active"><a href="#!main">Home</a></li>
-                    <li><a href="#!useroptions">Conduct a blood Camp</a></li> 
+                    <li><a href="#!useroptions">Conduct a blood Camp</a></li>
                     <li><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
                     <li><a href="#!proximalbanks">Blood Banks Near You</a></li>
                     <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -44,7 +44,7 @@
 
     </div>
 </nav>
-
+<br><br>
 <div class="container row">
     <div class="container col-sm-7"></div>
     <div class="container col-sm-5">
@@ -87,14 +87,14 @@
                             <input type="email" class="form-control" id="email" placeholder="Enter email">
                         </div>
                         <div class="col-sm-1"></div>
-                        <label class="control-label col-sm-1" for="date">Contact No.:</label>
-                        <div class="col-sm-4">
+                        <label class="control-label col-sm-2" for="date">Contact No.:</label>
+                        <div class="col-sm-3">
                             <input type="contact" class="form-control" id="contact" placeholder="Enter Contact No.">
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-1" for="bloodgroup">Blood Group:</label>
-                        <div class="col-sm-4">
+                        <label class="control-label col-sm-2" for="bloodgroup">Blood Group:</label>
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <select class="form-control" id="bloodgroup">
                                               <option>A+</option>
@@ -109,8 +109,8 @@
                             </div>
                         </div>
                         <div class="col-sm-1"></div>
-                        <label class="control-label col-sm-1" for="reqbef">Required Before:</label>
-                        <div class="col-sm-4">
+                        <label class="control-label col-sm-3" for="reqbef">Required Before:</label>
+                        <div class="col-sm-2">
                             <input type="reqbef" class="form-control" id="reqbef" placeholder="Enter date">
                         </div>
                     </div>
@@ -170,25 +170,25 @@
             <div class="modal-body">
                 <form class="form-horizontal">
                     <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-2" for="name">Name:</label>
-                        <div class="col-sm-6">
-                            <input type="name" class="form-control" id="name" placeholder="Enter name">
+                        <label class="control-label col-sm-1" for="name">Name:</label>
+                        <div class="col-sm-7">
+                            <input type="name" class="form-control" id="name" ng-model="donor.name" placeholder="Enter name">
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <label class="control-label col-sm-1" for="email">Email:</label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email" ng-model="donor.email" placeholder="Enter email">
                         </div>
                         <div class="col-sm-1"></div>
-                        <label class="control-label col-sm-1" for="contact">Contact No.:</label>
-                        <div class="col-sm-4">
-                            <input type="contact" class="form-control" id="contact" placeholder="Enter Contact No.">
+                        <label class="control-label col-sm-2" for="contact">Contact No.:</label>
+                        <div class="col-sm-3">
+                            <input type="contact" class="form-control" id="contact" ng-model="donor.contact" placeholder="Enter Contact No.">
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <label class="control-label col-sm-1" for="gender">Gender:</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-7" ng-model="donor.gender">
                             <label class="checkbox-inline"><input type="checkbox" value="male">Male</label>
                             <label class="checkbox-inline"><input type="checkbox" value="female">Female</label>
                             <label class="checkbox-inline"><input type="checkbox" value="other">Other</label>
@@ -197,13 +197,13 @@
                     <div class="form-group form-group-sm">
                         <label class="control-label col-sm-1" for="age">Age:</label>
                         <div class="col-sm-4">
-                            <input type="age" class="form-control" id="age" placeholder="Enter age">
+                            <input type="age" class="form-control" id="age" ng-model="donor.age" placeholder="Enter age">
                         </div>
                         <div class="col-sm-1"></div>
-                        <label class="control-label col-sm-1" for="bloodgroup">Blood Group:</label>
-                        <div class="col-sm-4">
+                        <label class="control-label col-sm-2 text-left" for="bloodgroup">Blood Group:</label>
+                        <div class="col-sm-3">
                             <div class="form-group form-group-sm">
-                                <select class="form-control" id="bloodgroup">
+                                <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
                                           <option>A+</option>
                                           <option>B+</option>
                                           <option>AB+</option>
@@ -218,7 +218,7 @@
                     </div>
                     <div class="form-group form-group-sm">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="button-def" style="float:right; margin-right:20px;">Submit</button>
+                            <button type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
                         </div>
                     </div>
                 </form>

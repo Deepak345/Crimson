@@ -1,74 +1,132 @@
-<div class="panel panel-default" ng-repeat="event in events">
-    <div class="panel-heading">{{ event.name }}</div>
-    <div class="panel-body">
-        <ul>
-            <li><b>Venue :</b> {{ event.venue }}</li>
-            <li><b>Date :</b> {{ event.date }}</li>
-            <li><b>Time :</b> {{ event.time }}</li>
-        </ul>
-        <button class="btn btn-primary" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#modalForm">Register</button>
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+
+        <div class="row">
+            <div class="col-sm-2 col-xs-12">
+                <div id="gtco-logo">
+                    <h1><a href="#!main">CRIMSON</a></h1>
+                </div>
+            </div>
+            <div class="col-xs-10 text-right menu-1">
+                <ul>
+                    <li><a href="#!main">Home</a></li>
+                    <li><a href="#!useroptions">Conduct a blood Camp</a></li>
+                    <li class="active"><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
+                    <li><a href="#!proximalbanks">Blood Banks Near You</a></li>
+                    <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
+</nav>
+<br><br>
+
+<div class="container row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <div class="panel panel-default" ng-repeat="event in events" style="text-align:center;">
+            <div class="panel-heading" style="margin: auto;">{{ event.name }}</div>
+            <div class="panel-body">
+                <ul style="list-style-type: none;">
+                    <li><b>Venue :</b> {{ event.venue }}</li>
+                    <li><b>Date :</b> {{ event.date }}</li>
+                    <li><b>Time :</b> {{ event.time }}</li>
+                </ul>
+                <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3"></div>
 </div>
 
 <!-- Modal -->
-<div id="modalForm" class="modal fade" role="dialog">
+<div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-    
+
         <!-- Modal content-->
         <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Register For Event</h4>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label>Full Name</label>
-                    <input type="text" class="form-control" ng-model="donor.name">
-                </div>
-                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label>Email</label>
-                    <input type="email" class="form-control" ng-model="donor.email">
-                </div>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Registration</h4>
             </div>
-            <div class="row">
-                <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <label>Age</label>
-                    <input type="text" class="form-control" ng-model="donor.age"> 
-                </div>
-                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label>Gender</label>
-                    <select class="form-control" ng-model="donor.gender">
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Others</option>
-                    </select>
-                </div>
-                <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <label>Blood Group</label>
-                    <select class="form-control" ng-model="donor.bloodGrp">
-                        <option>A+ve</option>
-                        <option>A-ve</option>
-                        <option>B+ve</option>
-                        <option>B-ve</option>
-                        <option>AB+ve</option>
-                        <option>AB-ve</option>
-                        <option>O+ve</option>
-                        <option>O-ve</option>
-                    </select>
-                </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group form-group-sm">
+                        <label class="control-label col-sm-1" for="name">Name:</label>
+                        <div class="col-sm-7">
+                            <input type="name" class="form-control" id="name" ng-model="donor.name" placeholder="Enter name">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="control-label col-sm-1" for="email">Email:</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="email" ng-model="donor.email" placeholder="Enter email">
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <label class="control-label col-sm-2" for="contact">Contact No.:</label>
+                        <div class="col-sm-3">
+                            <input type="contact" class="form-control" id="contact" ng-model="donor.contact" placeholder="Enter Contact No.">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="control-label col-sm-1" for="gender">Gender:</label>
+                        <div class="col-sm-7" ng-model="donor.gender">
+                            <label class="checkbox-inline"><input type="checkbox" value="male">Male</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="female">Female</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="other">Other</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="control-label col-sm-1" for="age">Age:</label>
+                        <div class="col-sm-4">
+                            <input type="age" class="form-control" id="age" ng-model="donor.age" placeholder="Enter age">
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <label class="control-label col-sm-2 text-left" for="bloodgroup">Blood Group:</label>
+                        <div class="col-sm-3">
+                            <div class="form-group form-group-sm">
+                                <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
+                                              <option>A+</option>
+                                              <option>B+</option>
+                                              <option>AB+</option>
+                                              <option>O+</option>
+                                              <option>A-</option>
+                                              <option>B-</option>
+                                              <option>AB-</option>
+                                              <option>O-</option>
+                                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="row">
-                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label>Contact</label>
-                    <input type="text" class="form-control" ng-model="donor.contact">
-                </div>
-            </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="register()">Submit</button>
-        </div>
-        </div>
-    
+
     </div>
 </div>
+<br><br>
+
+<footer id="gtco-footer" class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 style="color: white;">CRIMSON</h3>
+            <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 gtco-footer-subscribe">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</footer>
