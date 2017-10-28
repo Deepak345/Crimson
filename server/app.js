@@ -17,6 +17,8 @@ db.once('open', function() {
 
 app.use('/', routes);
 
+app.use(express.static(__dirname + '/../client/app'));
+
 app.listen(3000, function() {
     console.log("Listening to port 3000...");
 });
