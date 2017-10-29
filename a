@@ -1,0 +1,287 @@
+[33mcommit 6b8773a2e752fed7cd68e52c5b54f6910c410208[m
+Merge: a94048f bbe5f0f
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 11:47:40 2017 +0530
+
+    dpk-2
+
+[33mcommit bbe5f0f83e72d1fdf1dfb3849b6d5b1795d31d8e[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 11:44:19 2017 +0530
+
+    NVS-10
+
+[33mcommit ee268ac127a08fc1b5b13503c37567d9f3236bd9[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 11:28:27 2017 +0530
+
+    configured objectid
+
+[33mcommit a94048f8f87a20691dbc7d0b1db3e453bbea0acf[m
+Merge: a8d7394 9d189e4
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 11:18:07 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/codeRedClient
+
+[33mcommit a8d7394784828216b6e608cb61c42d3d9b81b0d7[m
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 11:17:29 2017 +0530
+
+    dpk
+
+[33mcommit 9d189e4cc7146e55ea7ebd607f209e814cb705c5[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 11:14:50 2017 +0530
+
+    NVS-9
+
+[33mcommit cfebb61a16e57baea20d92fdedacf12f56647845[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 10:27:03 2017 +0530
+
+    NVS-8
+
+[33mcommit d8c7ba57a526716835f993de4e967de0e0de6783[m
+Merge: 25565e4 db97947
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 09:53:27 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit db97947e1c52f5886cee53230f74c2aef62b5731[m
+Merge: 9f18a54 5c3c1f5
+Author: N V S ABHISHEK <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 09:52:50 2017 +0530
+
+    Merge pull request #3 from Deepak345/master
+    
+    added a about section and edited footer
+
+[33mcommit 5c3c1f5c5ea251c8e3a77919f0b95d8deac15e1a[m
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 08:02:33 2017 +0530
+
+    added a about section and edited footer
+
+[33mcommit 25565e483e07f0756a88b4b26bf32e6c46bc1aa2[m
+Merge: 79f3895 9f18a54
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 04:47:38 2017 +0530
+
+    NVS-8
+
+[33mcommit 79f389567651f9597dae0c3824d80966afb8d4d3[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 04:41:01 2017 +0530
+
+    NVS-8
+
+[33mcommit 9f18a54e8aafcb35cf8d45e8d9fac59d5380246e[m
+Merge: 9d102d8 592f895
+Author: N V S ABHISHEK <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 04:36:51 2017 +0530
+
+    Merge pull request #2 from Deepak345/master
+    
+    Updated UI
+
+[33mcommit 592f8951770dfc3089a41b1fae23e73756ec0027[m
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 04:35:04 2017 +0530
+
+    updated the UI for the organisation's pages
+
+[33mcommit 9d102d87b425b8974e3f88336981ddc8b77a2453[m
+Merge: 60e2d46 0dc51ae
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 04:32:29 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit 60e2d460a877ac0445cffb71140db19711dde18f[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 04:32:18 2017 +0530
+
+    NVS-7
+
+[33mcommit 0dc51ae6274d2af08fb502b6890716082acb4a7b[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sun Oct 29 04:30:13 2017 +0530
+
+    Create event fixed
+
+[33mcommit 04b1a0c86ba6934fb4598d6354a51edc76c9a0d7[m
+Merge: 51cced0 89b8b5b
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 03:28:20 2017 +0530
+
+    Updated UI
+
+[33mcommit 51cced0a7befd0fa333f8fd61386eb2df0d1203e[m
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 03:25:49 2017 +0530
+
+    updated UI of different pages
+
+[33mcommit 547ef1b970fb73031c6d88a32b71a46eae68df76[m
+Merge: 14ca789 89b8b5b
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 02:56:36 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit 89b8b5b256d97da54f5906062963d3484dcb7317[m
+Merge: 576e42c ebc4de1
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sun Oct 29 02:54:17 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit 576e42c54c30e4111b7342cddb2f0682207a551f[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sun Oct 29 02:48:01 2017 +0530
+
+    Rama-1
+
+[33mcommit 14ca7895824cdf703887b83dcf89f5a813e8ce5c[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 02:46:16 2017 +0530
+
+    NVS-6
+
+[33mcommit cff112a120711d77e9afb59223ea5b68995a5d54[m
+Merge: 4921e8e ebc4de1
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 01:20:06 2017 +0530
+
+    resolved merge conflicts
+
+[33mcommit 4921e8ea5102fddc2599ad4bb3dea13999c0b0e7[m
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 01:17:13 2017 +0530
+
+    edited app.js to include upcoming events
+
+[33mcommit ebc4de180dbe1b4666fb87f8a8fde19db571e1f8[m
+Merge: 4597299 8aff2a1
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 01:14:15 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit 4597299cf74256d505c2daecaac717eb51206e4c[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 01:13:36 2017 +0530
+
+    NVS-5
+
+[33mcommit 8aff2a1bbfb27d81cb2ab17eeb77d90326b914f7[m
+Merge: a6e0d39 0312be0
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sun Oct 29 01:03:00 2017 +0530
+
+    conflicts resolved
+
+[33mcommit 69208665ff3cb34e2fa40b9f8f7cceea053b9262[m
+Merge: f3a7c2a 0312be0
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 00:53:23 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit f3a7c2afbecb6d901f15e01b12e5ee1867038d58[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 00:33:31 2017 +0530
+
+    NVS-4
+
+[33mcommit a6e0d3986005638c9008f798357678662243b077[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sun Oct 29 00:33:16 2017 +0530
+
+    More controllers added
+
+[33mcommit 1957250dcfa804b79d8116253d83ca119ee4ecb8[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 00:28:25 2017 +0530
+
+    NVS commit-3
+
+[33mcommit 0312be08a3432f21f69c623aa82c792ebcdd7d89[m
+Merge: d9e1736 1fb3f46
+Author: N V S ABHISHEK <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 00:26:01 2017 +0530
+
+    Merge pull request #1 from Deepak345/master
+    
+    home page UI
+
+[33mcommit 1fb3f463f037f64531f94192da9acac659df6df1[m
+Merge: 7057625 d9e1736
+Author: N V S ABHISHEK <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 00:24:43 2017 +0530
+
+    Merge branch 'master' into master
+
+[33mcommit 70576257e3f99db9bd36495e2a6bcf26a77be1a9[m
+Merge: 8409c9e d9e1736
+Author: N V S ABHISHEK <nvsabhishek.india@gmail.com>
+Date:   Sun Oct 29 00:22:47 2017 +0530
+
+    Merge branch 'master' into master
+
+[33mcommit 8409c9e87f95e279c63cde820c734c1ec25dc05e[m
+Author: Deepak345 <senapati.dipak97@gmail.com>
+Date:   Sun Oct 29 00:12:36 2017 +0530
+
+    home page UI
+
+[33mcommit d9e1736de8bad8ca8b74ac823af0316025d61311[m
+Merge: c72514f da5925f
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sat Oct 28 22:52:00 2017 +0530
+
+    Merge branch 'master' of https://github.com/rkpattnaik780/crimson
+
+[33mcommit c72514fb3f0e9050c48fe126275fd8e9eb24af2f[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sat Oct 28 22:50:03 2017 +0530
+
+    NVS Server Edits
+
+[33mcommit da5925fdee47be2ff2989df4485da2da1e9c5482[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sat Oct 28 22:45:42 2017 +0530
+
+    Rama Commit Server
+
+[33mcommit 82fcfb6bc0c3688b49e97cd01cf824c7ab6deca9[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sat Oct 28 20:09:27 2017 +0530
+
+    open gov data handled
+
+[33mcommit ef97b8dfdbe7f93a14aff68b7d8b06d4997d3333[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sat Oct 28 17:37:58 2017 +0530
+
+    Configured Serving
+
+[33mcommit af1fd514b1f7103ea0e60189eb66ff136021a756[m
+Author: N V S Abhishek <nvsabhishek.india@gmail.com>
+Date:   Sat Oct 28 17:27:05 2017 +0530
+
+    Added Server
+
+[33mcommit 2769830e4d40feee1436e4ad64db4ebddf91f346[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sat Oct 28 17:24:15 2017 +0530
+
+    New functionalities
+
+[33mcommit 46b3050ff78aa67bf917463cd25df98ad6d010b6[m
+Author: rkpattnaik780 <rkpattnaik780@gmail.com>
+Date:   Sat Oct 28 02:27:51 2017 +0530
+
+    initial commit
