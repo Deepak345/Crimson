@@ -10,7 +10,6 @@ var donorSchema = new Schema({
     bloodGrp: { type: String, enum: [ "O+ve", "O-ve", "B+ve", "B-ve", "AB+ve", "AB-ve", "A+ve", "A-ve" ] }
 });
 
-donorSchema.index({email: 'text'});
 
 var donorModel = mongoose.model('donor', donorSchema);
 

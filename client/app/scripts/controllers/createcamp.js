@@ -11,6 +11,7 @@ angular.module('clientApp')
     console.log(event);
     $http.post("/createevent", { "event": event }).then(function(res) {
       console.log(res);
+      $location.path("upcomingevents");
     });
     
   

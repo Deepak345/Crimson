@@ -32,6 +32,7 @@
                     <li><b>Venue :</b> {{ event.venue }}</li>
                     <li><b>Date :</b> {{ event.date }}</li>
                     <li><b>Time :</b> {{ event.time }}</li>
+                    <li><b>Total Donors Registered :</b> {{ event.donors.length }}</li>
                 </ul>
                 <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
             </div>
@@ -87,6 +88,7 @@
                         <div class="col-sm-3">
                             <div class="form-group form-group-sm">
                                 <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
+<<<<<<< HEAD
                                               <option>A+ve</option>
                                               <option>B+ve</option>
                                               <option>AB+ve</option>
@@ -96,12 +98,23 @@
                                               <option>AB-ve</option>
                                               <option>O-ve</option>
                                             </select>
+=======
+                                        <option>A+ve</option>
+                                        <option>B+ve</option>
+                                        <option>AB+ve</option>
+                                        <option>O+ve</option>
+                                        <option>A-ve</option>
+                                        <option>B-ve</option>
+                                        <option>AB-ve</option>
+                                        <option>O-ve</option>
+                                    </select>
+>>>>>>> bbe5f0f83e72d1fdf1dfb3849b6d5b1795d31d8e
                             </div>
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
+                            <button data-dismiss="modal" type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
                         </div>
                     </div>
                 </form>
