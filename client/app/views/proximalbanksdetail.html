@@ -21,22 +21,60 @@
     </div>
 </nav>
 
-<h1>Name - {{proxdetcamp.name}}</h1>
-<h3>{{proxdetcamp.address}}</h3>
-<h3>{{proxdetcamp.city}} , {{proxdetcamp.district}} , {{proxdetcamp.state}}</h3>
-<h3>PIN - {{proxdetcamp.pincode}}</h3>
-<p>Phone No. - {{proxdetcamp.contactno}}</p>
-<p>Mobile - {{proxdetcamp.mobile}}</p>
-<p>Email ID - {{proxdetcamp.email}}</p>
-<p>Category - {{proxdetcamp.category}}</p>
-<p>Component - {{proxdetcamp.component}}</p>
-<p>Timing - {{proxdetcamp.timing}}</p>
-<p>Website - <a href="{{proxdetcamp.website}}">Redirect to website</a></p>
-<p>Distance from here - {{proxdetcamp.distance}}</p>
+<br><br>
 <div class="well">
-    <h4>Nodal officer info</h4>
-    <p>Name - {{proxdetcamp.officer}}</p>
-    <p>Email - {{proxdetcamp.officerEmail}}</p>
-    <p>Phone No - {{proxdetcamp.officerNo}}</p>
-
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 text-center">
+        <h3>{{proxdetcamp.name}}</h3>
+        <h5>{{proxdetcamp.address}}</h5>
+        <h5>{{proxdetcamp.city}} , {{proxdetcamp.district}} , {{proxdetcamp.state}}</h5>
+        <h5>Phone No. - {{proxdetcamp.contactno}}</h5>
+    </div>
+    <div class="col-sm-3"></div>
+    <div class="row">
+        <p class="col-sm-6">PIN - {{proxdetcamp.pincode}}</p>
+        <p class="col-sm-6">Mobile - {{proxdetcamp.mobile}}</p>
+    </div>
+    <div class="row">
+        <p class="col-sm-6">Email ID - {{proxdetcamp.email}}</p>
+        <p class="col-sm-6">Category - {{proxdetcamp.category}}</p>
+    </div>
+    <div class="row">
+        <p class="col-sm-6">Component - {{proxdetcamp.component}}</p>
+        <p class="col-sm-6">Timing - {{proxdetcamp.timing}}</p>
+    </div>
+    <div class="row">
+        <p class="col-sm-6">Website - <a href="{{proxdetcamp.website}}">Redirect to website</a></p>
+        <p class="col-sm-6">Distance from here - {{proxdetcamp.distance}}</p>
+    </div>
 </div>
+<div class="well row">
+    <h4 class="text-center">Nodal officer info</h4>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <p>Name - {{proxdetcamp.officer}}</p>
+        <p>Email - {{proxdetcamp.officerEmail}}</p>
+        <p>Phone No - {{proxdetcamp.officerNo}}</p>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+<br><br>
+<footer id="gtco-footer" class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 style="color: white;">CRIMSON</h3>
+        </div>
+        <div class="col-sm-4">
+            <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
+        </div>
+        <div class="col-sm-4 gtco-footer-subscribe">
+            <form class="form-inline">
+                <div class="form-group form-group-sm">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="" placeholder="Email">
+                </div>
+                <button type="submit" class="button-def">Send</button>
+            </form>
+        </div>
+    </div>
+</footer>
