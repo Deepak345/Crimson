@@ -2,11 +2,25 @@ var mongoose = require('mongoose');
 var EventModel = require('../models/event');
 var DonorModel = require('../models/donor');
 var BankModel = require('../models/bank');
+var OrgModel = require('../models/org');
 
 var createNewEvent = function(req, res) {
-    var newEvent = new EventModel(req.body.event);
+    var newEvent = new EventModel({
+        name: req.body.event.name,
+        venue: req.body.event.venue,
+        date: req.body.event.date,
+        time: req.body.event.time,
+        isOver: false,
+        content: req.body.event.content,
+        donors: [],
+        conductor: { 
+            typeOf: req.body.event.conductor.typeOf,
+            details: mongoose.Schema.Types.ObjectId(req.body.event.conductor.details)
+         }
+    });
     newEvent.save(function(err, doc) {
         if(err) throw err;
+        console.log(doc);
         if(doc.conductor.typeOf === "Organization") {
             OrgModel.update({ _id: doc.conductor.details }, { $push: { events:  doc._id} }, function(err, doc) {
                 if(err) throw err;
