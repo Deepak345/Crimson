@@ -13,6 +13,15 @@ angular.module('clientApp')
                              {"name" : "Hi-Tech Medical College & Hospital Blood Bank" , "email" : "bloodbankhitech@gmail.com"},
                              {"name" : "Sum Hospital Blood Bank" , "email" : "bloodbanksumhospital768@gmail.com"}];
 
+        $scope.selectedOrg = $scope.mailList[0] ;
+
+        $scope.sendMail = function(email,sub,content){
+            $http.post("/sendemail" , {"to" : email , "subject" : sub, "text" : content}).then(function(res){
+                console.log(res);
+            },function(error){
+                console.log(error);
+            })
+        }
        
 
     });

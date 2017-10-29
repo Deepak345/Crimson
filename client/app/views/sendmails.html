@@ -1,1 +1,10 @@
 <select ng-model = "selectedOrg" ng-options = "x.name for x in mailList" class = "form-control"></select>
+<br>
+<input class="form-group" name = "to" ng-model = "selectedOrg.email" readonly>
+<br>
+<input class = "form-group" name ="subject" ng-model = "subject" placeholder = "Enter the subject">
+<br>
+<textarea class = "form-group" placeholder = "Enter the content" ng-model = "content" name = "content">
+<br>
+</textarea>
+<button class = "btn btn-display" ng-click = "sendMail(selectedOrg.email , subject , email)">Send mail</button>

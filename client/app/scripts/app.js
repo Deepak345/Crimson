@@ -51,6 +51,11 @@ angular
                 controller: 'SignupCtrl',
                 controllerAs: 'signup'
             })
+            .when('/orgevents/:id', {
+                templateUrl: 'views/orgevents.html',
+                controller: 'OrgeventCtrl',
+                controllerAs: 'orgevent'
+            })
             .when('/organizationsignup', {
                 templateUrl: 'views/organizationsignup.html',
                 controller: 'OrgsignupCtrl',

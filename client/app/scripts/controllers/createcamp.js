@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-.controller('CreatecampCtrl', function ($location , $scope , $http , userservice) {
+.controller('CreatecampCtrl', function ($location , $scope , $http , userservice) {console.log(userservice.getUserDetails());
   /*if(!userservice.checkSession()){
     $location.path("useroptions");
   }*/
