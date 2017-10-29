@@ -513,6 +513,7 @@ figure {
 
 #gtco-footer {
     background: #262626;
+    max-height: 80px;
 }
 
 #gtco-footer a:hover {
@@ -1899,6 +1900,12 @@ blockquote p>cite {
 .events {
     border: 1px solid #C6C3C3;
     padding: 20px 0px;
+}
+
+.aboutProject {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 0px 10px 10px;
 }
 
 
