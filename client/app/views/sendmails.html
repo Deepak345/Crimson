@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <select ng-model = "selectedOrg" ng-options = "x.name for x in mailList" class = "form-control"></select>
 <br>
 <input class="form-group" name = "to" ng-model = "selectedOrg.email" readonly>
@@ -8,3 +9,51 @@
 <br>
 </textarea>
 <button class = "btn btn-display" ng-click = "sendMail(selectedOrg.email , subject , email)">Send mail</button>
+=======
+<nav class="gtco-nav" role="navigation">
+    <div class="gtco-container">
+
+        <div class="row">
+            <div class="col-sm-2 col-xs-12">
+                <div id="gtco-logo">
+                    <h1><a href="#!main">CRIMSON</a></h1>
+                </div>
+            </div>
+            <div class="col-xs-10 text-right menu-1">
+                <ul>
+                    <li><a href="#!main">Home</a></li>
+                    <li><a href="#!useroptions">Conduct a blood Camp</a></li>
+                    <li><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
+                    <li><a href="#!proximalbanks">Blood Banks Near You</a></li>
+                    <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<br><br>
+
+<select ng-model="selectedOrg" ng-options="x.name for x in mailList" class="form-control"></select>
+<br><br>
+
+<footer id="gtco-footer" class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 style="color: white;">CRIMSON</h3>
+        </div>
+        <div class="col-sm-4">
+            <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
+        </div>
+        <div class="col-sm-4 gtco-footer-subscribe">
+            <form class="form-inline">
+                <div class="form-group form-group-sm">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="" placeholder="Email">
+                </div>
+                <button type="submit" class="button-def">Send</button>
+            </form>
+        </div>
+    </div>
+</footer>
+>>>>>>> eeb8fac4e91f993e52e1f443c7d25546ebd2c63a

@@ -32,6 +32,7 @@
                     <li><b>Venue :</b> {{ event.venue }}</li>
                     <li><b>Date :</b> {{ event.date }}</li>
                     <li><b>Time :</b> {{ event.time }}</li>
+                    <li><b>Total Donors Registered :</b> {{ event.donors.length }}</li>
                 </ul>
                 <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
             </div>
@@ -87,21 +88,21 @@
                         <div class="col-sm-3">
                             <div class="form-group form-group-sm">
                                 <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
-                                              <option>A+</option>
-                                              <option>B+</option>
-                                              <option>AB+</option>
-                                              <option>O+</option>
-                                              <option>A-</option>
-                                              <option>B-</option>
-                                              <option>AB-</option>
-                                              <option>O-</option>
-                                            </select>
+                                        <option>A+ve</option>
+                                        <option>B+ve</option>
+                                        <option>AB+ve</option>
+                                        <option>O+ve</option>
+                                        <option>A-ve</option>
+                                        <option>B-ve</option>
+                                        <option>AB-ve</option>
+                                        <option>O-ve</option>
+                                    </select>
                             </div>
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
+                            <button data-dismiss="modal" type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -116,16 +117,17 @@
     <div class="row">
         <div class="col-sm-4">
             <h3 style="color: white;">CRIMSON</h3>
+        </div>
+        <div class="col-sm-4">
             <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
         </div>
-        <div class="col-sm-4"></div>
         <div class="col-sm-4 gtco-footer-subscribe">
             <form class="form-inline">
-                <div class="form-group">
+                <div class="form-group form-group-sm">
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
                     <input type="email" class="form-control" id="" placeholder="Email">
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="button-def">Send</button>
             </form>
         </div>
     </div>

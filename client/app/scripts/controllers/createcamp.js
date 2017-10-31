@@ -9,10 +9,11 @@ angular.module('clientApp')
   $scope.submit = function(event){
     event.conductor = { "typeOf" : userservice.getUserDetails().userType , "details" : userservice.getUserDetails().id};
     console.log(event);
-    $http.post("/createevent", event).then(function(res) {
+    $http.post("/createevent", { "event": event }).then(function(res) {
       console.log(res);
+      $location.path("upcomingevents");
     });
     
   
   }
-});
+}); 

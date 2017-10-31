@@ -47,8 +47,15 @@
 <br><br>
 
 <div class="container row">
-    <div class="container col-sm-7"></div>
-    <div class="container col-sm-5">
+    <div class="container col-sm-5 aboutProject"><br>
+        <h4 class="text-center">About the Project:</h4>
+        <p class="text-center">This web-app aims to remove the various bottlenecks while conducting a blood donation camp and the entire blood donation process. It provides a siingle platform for organisers to conduct blood camp. It also provides a feature for emergency blood
+            requirements where a person can post for help if he cannot find a particular blood type in nearby blood-banks. Intrested volunteers would then contact that person to donate blood. This also aims to improve the blood availability between blood
+            banks.
+        </p>
+    </div>
+
+    <div class="container col-sm-6">
         <div class="panel panel-warning" style="background-color: #FF7575; color: white;">
             <div class="panel-body">
                 <h3 style="text-align: center">Emergency blood needs</h3>
@@ -98,14 +105,14 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <select class="form-control" id="bloodgroup">
-                                              <option>A+</option>
-                                              <option>B+</option>
-                                              <option>AB+</option>
-                                              <option>O+</option>
-                                              <option>A-</option>
-                                              <option>B-</option>
-                                              <option>AB-</option>
-                                              <option>O-</option>
+                                              <option>A+ve</option>
+                                              <option>B+ve</option>
+                                              <option>AB+ve</option>
+                                              <option>O+ve</option>
+                                              <option>A-ve</option>
+                                              <option>B-ve</option>
+                                              <option>AB-ve</option>
+                                              <option>O-ve</option>
                                             </select>
                             </div>
                         </div>
@@ -117,7 +124,7 @@
                     </div>
                     <div class="form-group form-group-sm">
                         <div class="col-sm-offset-2">
-                            <button type="submit" class="button-def" style="float: right; margin-right: 20px;">Submit</button>
+                            <button data-dismiss="modal" type="submit" class="button-def" style="float: right; margin-right: 20px;">Submit</button>
                         </div>
 
                     </div>
@@ -205,21 +212,21 @@
                         <div class="col-sm-3">
                             <div class="form-group form-group-sm">
                                 <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
-                                          <option>A+</option>
-                                          <option>B+</option>
-                                          <option>AB+</option>
-                                          <option>O+</option>
-                                          <option>A-</option>
-                                          <option>B-</option>
-                                          <option>AB-</option>
-                                          <option>O-</option>
+                                          <option>A+ve</option>
+                                          <option>B+ve</option>
+                                          <option>AB+ve</option>
+                                          <option>O+ve</option>
+                                          <option>A-ve</option>
+                                          <option>B-ve</option>
+                                          <option>AB-ve</option>
+                                          <option>O-ve</option>
                                         </select>
                             </div>
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
+                            <button data-dismiss="modal" type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -291,16 +298,17 @@
     <div class="row">
         <div class="col-sm-4">
             <h3 style="color: white;">CRIMSON</h3>
+        </div>
+        <div class="col-sm-4">
             <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
         </div>
-        <div class="col-sm-4"></div>
         <div class="col-sm-4 gtco-footer-subscribe">
             <form class="form-inline">
-                <div class="form-group">
+                <div class="form-group form-group-sm">
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
                     <input type="email" class="form-control" id="" placeholder="Email">
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="button-def">Send</button>
             </form>
         </div>
     </div>
