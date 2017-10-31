@@ -20,10 +20,16 @@
 
     </div>
 </nav>
-<br><br>
+<br><br><br><br>
 
-<select ng-model="selectedOrg" ng-options="x.name for x in mailList" class="form-control"></select>
-<br><br>
+<div class="form-group form-group-sm row">
+    <div class="col-sm-2"></div>
+    <label class="col-sm-3">Mail List</label>
+    <div class="col-sm-5">
+        <select ng-model="selectedOrg" ng-options="x.name for x in mailList" class="form-control"></select></div>
+</div>
+<div class="col-sm-2"></div>
+<br><br><br><br>
 
 <footer id="gtco-footer" class="container-fluid text-center">
     <div class="row">
