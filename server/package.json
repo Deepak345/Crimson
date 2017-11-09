@@ -4,7 +4,8 @@
   "description": "Server side for blood bank application.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [
     "blood",
@@ -13,7 +14,7 @@
     "app",
     "opengovdatahack"
   ],
-  "author": "nvs16,deepak345,rkpattnaik780",
+  "authors": "nvs16,deepak345,rkpattnaik780",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",

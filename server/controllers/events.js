@@ -3,6 +3,7 @@ var EventModel = require('../models/event');
 var DonorModel = require('../models/donor');
 var BankModel = require('../models/bank');
 var OrgModel = require('../models/org');
+var NoticeModel = require("../models/notice");
 
 var createNewEvent = function(req, res) {
     var newEvent = new EventModel({
