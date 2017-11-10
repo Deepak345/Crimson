@@ -141,6 +141,14 @@ figure {
     color: #fff;
 }
 
+#gtco-logo a {
+    font-family: 'Shrikhand', cursive;
+}
+
+.page-links li a {
+    font-family: 'Kalam', cursive;
+}
+
 @media screen and (max-width: 768px) {
     .gtco-nav .menu-1,
     .gtco-nav .menu-2 {
