@@ -51,7 +51,7 @@
 
     <label class="col-sm-4">To</label>
     <div class="col-sm-8">
-        <input class="form-control" name="to" ng-model="selectedOrg.email" readonly style = "width : 400px">
+        <input class="form-control" name="to" ng-model="selectedOrg.email" readonly style="width : 400px">
     </div>
 </div>
 
@@ -59,7 +59,7 @@
 
     <label class="col-sm-4">Subject</label>
     <div class="col-sm-8">
-        <input class="form-control" name="subject" ng-model="subject" placeholder="Enter the subject" style = "width : 400px">        
+        <input class="form-control" name="subject" ng-model="subject" placeholder="Enter the subject" style="width : 400px">
     </div>
 </div>
 
@@ -67,30 +67,10 @@
 
     <label class="col-sm-4">Subject</label>
     <div class="col-sm-8">
-        <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows = "6" cols = "70">
+        <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows="6" cols="70">
            
-        </textarea>       
+        </textarea>
     </div>
 </div>
 
 <button class="btn btn-display" ng-click="sendMail(selectedOrg.email , subject , email)">Send mail</button>
-
-<footer id="gtco-footer" class="container-fluid text-center">
-    <div class="row">
-        <div class="col-sm-4">
-            <h3 style="color: white;">CRIMSON</h3>
-        </div>
-        <div class="col-sm-4">
-            <p>This site aims to address the various hindrances encountered during blood donation or organising a blood camp.</p>
-        </div>
-        <div class="col-sm-4 gtco-footer-subscribe">
-            <form class="form-inline">
-                <div class="form-group form-group-sm">
-                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                    <input type="email" class="form-control" placeholder="Email">
-                </div>
-                <button type="submit" class="button-def">Send</button>
-            </form>
-        </div>
-    </div>
-</footer>
