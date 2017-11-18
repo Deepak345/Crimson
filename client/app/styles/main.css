@@ -2,7 +2,7 @@
     font-family: 'Merienda One', cursive;
     font-weight: bold;
     font-size: 35px !important;
-    text-shadow: 2px 2px 5px #888;
+    text-shadow: 6px 6px 6px #888;
 }
 
 .navbar {
@@ -14,7 +14,7 @@
 
 .nav li a {
     font-family: 'Righteous', cursive;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 #nav-background {
@@ -26,10 +26,18 @@
     font-weight: bold;
 }
 
-#myNavbar ul li a:hover,
+#myNavbar ul li a:hover {
+    background-color: #FF4C4C !important;
+    text-shadow: 2px 2px 5px #888;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
 #myNavbar ul li.active>a {
-    background-color: rgba(215, 3, 3, 0.73) !important;
-    font-size: 15px;
+    background-color: #FF4C4C !important;
+    font-size: 16px;
+    text-shadow: 2px 2px 5px #888;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
