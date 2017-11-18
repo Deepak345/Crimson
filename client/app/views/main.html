@@ -19,7 +19,7 @@
         </div>
     </div>
 </nav>
-<br><br><br>
+<br><br><br><br>
 <div class="row">
     <div class="col-sm-5 aboutProject"><br>
         <h4 class="text-center">About the Project:</h4>
@@ -46,7 +46,8 @@
     </div>
 </div>
 <br><br>
-<div id="requestModal" class="modal fade" role="dialog">
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -58,49 +59,56 @@
             <div class="modal-body">
                 <form class="form-horizontal">
                     <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-2" for="name">Name:</label>
-                        <div class="col-sm-6">
-                            <input type="name" class="form-control " id="name" placeholder="Enter name">
+                        <label class="control-label col-sm-1" for="name">Name:</label>
+                        <div class="col-sm-7">
+                            <input type="name" class="form-control" id="name" ng-model="donor.name" placeholder="Enter name">
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <label class="control-label col-sm-1" for="email">Email:</label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email" ng-model="donor.email" placeholder="Enter email">
                         </div>
                         <div class="col-sm-1"></div>
-                        <label class="control-label col-sm-2" for="date">Contact No.:</label>
+                        <label class="control-label col-sm-2" for="contact">Contact No.:</label>
                         <div class="col-sm-3">
-                            <input type="contact" class="form-control" id="contact" placeholder="Enter Contact No.">
+                            <input type="contact" class="form-control" id="contact" ng-model="donor.contact" placeholder="Enter Contact No.">
                         </div>
                     </div>
                     <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-2" for="bloodgroup">Blood Group:</label>
+                        <label class="control-label col-sm-1" for="gender">Gender:</label>
+                        <div class="col-sm-7" ng-model="donor.gender">
+                            <label class="checkbox-inline"><input type="checkbox" value="male">Male</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="female">Female</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="other">Other</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-sm">
+                        <label class="control-label col-sm-1" for="age">Age:</label>
+                        <div class="col-sm-4">
+                            <input type="age" class="form-control" id="age" ng-model="donor.age" placeholder="Enter age">
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <label class="control-label col-sm-2 text-left" for="bloodgroup">Blood Group:</label>
                         <div class="col-sm-3">
-                            <div class="form-group">
-                                <select class="form-control" id="bloodgroup">
-                                              <option>A+ve</option>
-                                              <option>B+ve</option>
-                                              <option>AB+ve</option>
-                                              <option>O+ve</option>
-                                              <option>A-ve</option>
-                                              <option>B-ve</option>
-                                              <option>AB-ve</option>
-                                              <option>O-ve</option>
-                                            </select>
+                            <div class="form-group form-group-sm">
+                                <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
+                                        <option>A+ve</option>
+                                        <option>B+ve</option>
+                                        <option>AB+ve</option>
+                                        <option>O+ve</option>
+                                        <option>A-ve</option>
+                                        <option>B-ve</option>
+                                        <option>AB-ve</option>
+                                        <option>O-ve</option>
+                                    </select>
                             </div>
                         </div>
-                        <div class="col-sm-1"></div>
-                        <label class="control-label col-sm-3" for="reqbef">Required Before:</label>
-                        <div class="col-sm-2">
-                            <input type="reqbef" class="form-control" id="reqbef" placeholder="Enter date">
-                        </div>
                     </div>
                     <div class="form-group form-group-sm">
-                        <div class="col-sm-offset-2">
-                            <button data-dismiss="modal" type="submit" class="button-def" style="float: right; margin-right: 20px;">Submit</button>
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button data-dismiss="modal" type="submit" class="button-def" style="float:right; margin-right:20px;" ng-click="register()">Submit</button>
                         </div>
-
                     </div>
                 </form>
             </div>
@@ -118,7 +126,7 @@
             <p>Date: 03/11/17</p>
             <p>Contact No.: 456771234</p>
             <p>Email Id: daddacdcd@abc.in</p>
-            <button type="button" class="button-def" data-toggle="modal" data-target="#myModal">Register</button>
+            <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
         </div>
         <div class="col-sm-4 events">
             <h6>ABC corp.</h6>
@@ -126,7 +134,7 @@
             <p>Date: 03/11/17</p>
             <p>Contact No.: 456771234</p>
             <p>Email Id: daddacdcd@abc.in</p>
-            <button type="button" class="button-def" data-toggle="modal" data-target="#myModal">Register</button>
+            <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
         </div>
         <div class="col-sm-4 events">
             <h6>ABC corp.</h6>
@@ -134,7 +142,7 @@
             <p>Date: 03/11/17</p>
             <p>Contact No.: 456771234</p>
             <p>Email Id: daddacdcd@abc.in</p>
-            <button type="button" class="button-def" data-toggle="modal" data-target="#myModal">Register</button>
+            <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
         </div>
     </div>
 </div>
