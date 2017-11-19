@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('ProximalCtrl', function($http, $scope, $location, selectedbankservice) {
+    .controller('ProximalCtrl', function($http, $scope, $location, selectedbankservice , resolveservice , mydata) {
+        console.log(mydata.data); 
+        var location;// console.log(mydata);
 
-        var location;
-
-        $http.get("https://data.gov.in/node/3287321/datastore/export/json").then(function(res) {
+      //  $http.get("https://data.gov.in/node/3287321/datastore/export/json").then(function(res) {
 
 
             $scope.bankList = [];
@@ -13,11 +13,11 @@ angular.module('clientApp')
             navigator.geolocation.getCurrentPosition(function(position) {
             location = position.coords;
             
-            for (var i = 0; i < res.data.length; i++) {
-                if (res.data[i][2] === "Odisha") {
-                    res.data[i][27] = distance(location.latitude, location.longitude, res.data[i][25], res.data[i][26]);
+            for (var i = 0; i < mydata.data.length; i++) {
+                if (mydata.data[i][2] === "Odisha") {
+                    mydata.data[i][27] = distance(location.latitude, location.longitude, mydata.data[i][25], mydata.data[i][26]);
                     $scope.$apply(function() {
-                    $scope.bankList.push(res.data[i]);
+                    $scope.bankList.push(mydata.data[i]);
                     $scope.bankList.sort(function(a, b) {
                         return a[27] - b[27];
                     });
@@ -29,10 +29,10 @@ angular.module('clientApp')
             });
 
       
-        }, function(error) {
+      /*  }, function(error) {
             alert("Error getting data");
             console.log(error);
-        });
+        }); */
 
         this.getMoreDetails = function(bank) {
             selectedbankservice.storeInfo(bank);
