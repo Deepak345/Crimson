@@ -34,7 +34,16 @@ angular
             .when('/proximalbanks', {
                 templateUrl: 'views/proximalbanks.html',
                 controller: 'ProximalCtrl',
-                controllerAs: 'proxcamp'
+                controllerAs: 'proxcamp',
+                resolve : {
+                  /*  mydata : function(resolveservice){
+                       banklist : resolveservice.getList();
+                    } */
+
+                    mydata : function(resolveservice) { return resolveservice.getList(); }
+
+                    }
+                
             })
             .when('/proximalbanksdetails', {
                 templateUrl: 'views/proximalbanksdetail.html',
@@ -51,6 +60,11 @@ angular
                 controller: 'SignupCtrl',
                 controllerAs: 'signup'
             })
+            .when('/orgevents/:id', {
+                templateUrl: 'views/orgevents.html',
+                controller: 'OrgeventCtrl',
+                controllerAs: 'orgevent'
+            })
             .when('/organizationsignup', {
                 templateUrl: 'views/organizationsignup.html',
                 controller: 'OrgsignupCtrl',
@@ -65,16 +79,6 @@ angular
                 templateUrl: 'views/banksignup.html',
                 controller: 'BanksignupCtrl',
                 controllerAs: 'banksignup'
-            })
-            .when('/regforbank', {
-                templateUrl: 'views/regforbank.html',
-                controller: 'BankregCtrl',
-                controllerAs: 'bankreg'
-            })
-            .when('/regfororg', {
-                templateUrl: 'views/regfororg.html',
-                controller: 'OrgregCtrl',
-                controllerAs: 'orgreg'
             })
             .when('/sharedlink/:id', {
                 templateUrl: 'views/sharedlink.html',

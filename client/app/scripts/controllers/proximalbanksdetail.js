@@ -19,7 +19,7 @@ angular.module('clientApp')
     this.category = details[18]
     this.component = details[19]
     this.timing = details[21]
-    this.location = {"latitude" : details[25] , "longitude" : details[26]};console.log(this);
+    this.location = {"latitude" : details[25] , "longitude" : details[26]};
     this.distance = details[27];
     
 });

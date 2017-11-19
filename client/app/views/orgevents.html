@@ -1,0 +1,27 @@
+<h1>Date - {{event.date}}</h1>
+<h3>Venue - {{event.venue}}</h3>
+<h5>Time - {{event.time}}</h5>
+<h5>Total registrations - {{event.donors.length}}</h5>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Age</td>
+            <td>Blood Group</td>
+            <td>Contact No</td>
+            <td>Email ID</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat = "donor in event.donors">
+            <td>{{donor.name}}</td>
+            <td>{{donor.gender}}</td>
+            <td>{{donor.age}}</td>
+            <td>{{donor.bloodGrp}}</td>
+            <td>{{donor.contact}}</td>
+            <td>{{donor.email}}</td>
+        </tr>
+    </tbody>
+</table>

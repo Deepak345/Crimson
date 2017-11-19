@@ -12,6 +12,7 @@ angular.module('clientApp')
             currentUser.name = user.name ;
             currentUser.contact = user.contact ;
             currentUser.email = user.email ;
+            currentUser.userType = user.userType ;
             currentUser.address = user.address ;
             currentUser.userType = user.userType ;
         },
