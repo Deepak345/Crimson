@@ -1,3 +1,62 @@
-<p>{{banksignup.text}}</p>
-<p>{{$root.color}}</p>
-<p>H</p>
+<link href="../styles/banksignup.css" rel="stylesheet" type="text/css"></link>
+
+
+<form class="regForm text-justify" ng-submit="submit()">
+    <h2>Blood Bank Sign Up</h2><br>
+    <div class="row">
+        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" ng-model="regForm.name">
+        </div>
+        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="contact">Contact</label>
+            <input type="text" class="form-control" ng-model="regForm.contact">
+        </div>
+        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" ng-model="regForm.email">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <label for="city">City</label>
+            <input type="text" class="form-control"ng-model="regForm.city">
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <label for="district">District</label>
+            <input type="text" class="form-control" ng-model="regForm.district">
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <label for="state">State</label>
+            <input type="text" class="form-control" ng-model="regForm.state">
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <label for="pin">Pin</label>
+            <input type="text" class="form-control" ng-model="regForm.pincode">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <label for="cat">Category</label>
+            <select type="text" class="form-control" ng-model="regForm.category">
+                <option>Public</option>
+                <option>Private</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="name">Nodal Officer Name</label>
+            <input type="text" class="form-control" ng-model="regForm.nodalOfficerName">
+        </div>
+        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="name">Nodal Officer Number</label>
+            <input type="text" class="form-control" ng-model="regForm.nodalOfficerNumber">
+        </div>
+        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="name">Nodal Officer Email</label>
+            <input type="email" class="form-control" ng-model="regForm.nodalOfficerEmail">
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
