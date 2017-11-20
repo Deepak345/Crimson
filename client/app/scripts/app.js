@@ -31,6 +31,11 @@ angular
                 controller: 'UpcomingeventCtrl',
                 controllerAs: 'upev'
             })
+            .when('/postrequest', {
+                templateUrl: 'views/postrequest.html',
+                controller: 'PostRequestCtrl',
+                controllerAs: 'poreq'
+            })
             .when('/proximalbanks', {
                 templateUrl: 'views/proximalbanks.html',
                 controller: 'ProximalCtrl',
