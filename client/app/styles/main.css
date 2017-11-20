@@ -1,8 +1,12 @@
+body {
+    font-family: 'Miriam Libre', cursive !important;
+}
+
 .logo {
-    font-family: 'Merienda One', cursive;
+    font-family: 'Righteous', cursive;
     font-weight: bold;
     font-size: 35px !important;
-    text-shadow: 6px 6px 6px #888;
+    text-shadow: 2px 2px 5px #888;
 }
 
 .navbar {
@@ -13,7 +17,7 @@
 }
 
 .nav li a {
-    font-family: 'Righteous', cursive;
+    font-family: 'Comfortaa', cursive !important;
     font-size: 14px;
 }
 

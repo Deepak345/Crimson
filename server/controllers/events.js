@@ -71,8 +71,22 @@ var registerToEvent = function(req, res) {
     });
 };
 
+var getAnEvent = function(req,res){ console.log("here"); console.log(req.params);
+   /* EventModel.findById(req.params.id , function(err , doc){
+        res.json(doc);
+    }); */
+    EventModel.findById(req.params.id)
+        .populate('donors')
+        .exec(function(err,doc){
+        if(err) throw err ;
+        res.json(doc);
+    })
+
+};
+
 module.exports = {
     createNewEvent: createNewEvent,
     getAllEvents: getAllEvents,
-    registerToEvent: registerToEvent
+    registerToEvent: registerToEvent,
+    getAnEvent : getAnEvent
 };

@@ -6,13 +6,14 @@ angular.module('clientApp')
     $location.path("useroptions");
   }
   
-  /* Get the current event 
-    $http.get().then(function(res){
-        $scope.event = res.data();
-    }, function(error){
 
+    $http.get("getevent/" + $routeParams.id).then(function(res){
+        console.log(res);
+        $scope.event = res.data ;
+    }, function(error){
+      console.log(error);
     });
-  */
+  
     
   alert($routeParams.id);
   

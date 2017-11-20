@@ -19,15 +19,14 @@ angular.module('clientApp')
             $scope.eventId = id;
         };
 
-        $scope.register = function() {
+        $scope.register = function() { alert("form submit")
             console.log($scope.eventId);
             $http.post('/registertoevent', { eventId: $scope.eventId, donor: $scope.donor }).then(function(res) {
                 console.log(res);
                 if (res.data.msg !== undefined) {
                     alert(res.data.msg);
                 }
-                // $location.path("upcomingevents");
-                // $route.reload();
+                location.reload();
             });
         };
     });
