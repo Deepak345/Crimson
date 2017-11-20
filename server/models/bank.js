@@ -5,8 +5,6 @@ var bankSchema = new Schema({
     name : { "type" : String , required : true },
     contact : { "type" : String , required : true },
     email : { "type" : String , required : true },
-    bloodGrps : [{ type: String, 
-                   enum: [ "O+ve", "O-ve", "B+ve", "B-ve", "AB+ve", "AB-ve", "A+ve", "A-ve" ] }] ,
     city : { "type" : String , required : true },
     district : { "type" : String , required : true },
     state : { "type" : String , required : true },
@@ -18,7 +16,6 @@ var bankSchema = new Schema({
     nodalOfficerName : { "type" : String , required : true },
     nodalOfficerNo : { "type" : String , required : true },
     nodalOfficerEmail : { "type" : String , required : true }
-    
 });
 
 
