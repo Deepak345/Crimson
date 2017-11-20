@@ -62,3 +62,9 @@ html {
     padding: 3px 0px 0px;
     border: none !important;
 }
+
+.detail-cont {
+    background-color: rgb(255, 247, 247);
+    margin-top: 20px;
+    border: 1px double red;
+}

@@ -20,33 +20,40 @@
     </div>
 </nav>
 <br><br><br>
-<div class="well">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6 text-center">
-        <h3>{{proxdetcamp.name}}</h3>
-        <h5>{{proxdetcamp.address}}</h5>
-        <h5>{{proxdetcamp.city}} , {{proxdetcamp.district}} , {{proxdetcamp.state}}</h5>
-        <h5>Phone No. - {{proxdetcamp.contactno}}</h5>
-    </div>
-    <div class="col-sm-3"></div>
+<div class="detail-cont">
     <div class="row">
-        <p class="col-sm-6">PIN - {{proxdetcamp.pincode}}</p>
-        <p class="col-sm-6">Mobile - {{proxdetcamp.mobile}}</p>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 text-center">
+            <h3>{{proxdetcamp.name}}</h3>
+            <h5>{{proxdetcamp.address}}</h5>
+            <h5>{{proxdetcamp.city}} , {{proxdetcamp.district}} , {{proxdetcamp.state}}</h5>
+            <h5>Phone No. - {{proxdetcamp.contactno}}</h5>
+        </div>
+        <div class="col-sm-3"></div>
     </div>
     <div class="row">
-        <p class="col-sm-6">Email ID - {{proxdetcamp.email}}</p>
-        <p class="col-sm-6">Category - {{proxdetcamp.category}}</p>
+        <p class="col-sm-2"></p>
+        <p class="col-sm-5">PIN - {{proxdetcamp.pincode}}</p>
+        <p class="col-sm-5">Mobile - {{proxdetcamp.mobile}}</p>
     </div>
     <div class="row">
-        <p class="col-sm-6">Component - {{proxdetcamp.component}}</p>
-        <p class="col-sm-6">Timing - {{proxdetcamp.timing}}</p>
+        <p class="col-sm-2"></p>
+        <p class="col-sm-5">Email ID - {{proxdetcamp.email}}</p>
+        <p class="col-sm-5">Category - {{proxdetcamp.category}}</p>
     </div>
     <div class="row">
-        <p class="col-sm-6">Website - <a href="{{proxdetcamp.website}}">Redirect to website</a></p>
-        <p class="col-sm-6">Distance from here - {{proxdetcamp.distance}}</p>
+        <p class="col-sm-2"></p>
+        <p class="col-sm-5">Component - {{proxdetcamp.component}}</p>
+        <p class="col-sm-5">Timing - {{proxdetcamp.timing}}</p>
+    </div>
+    <div class="row">
+        <p class="col-sm-2"></p>
+        <p class="col-sm-5">Website - <a href="{{proxdetcamp.website}}">Redirect to website</a></p>
+        <p class="col-sm-5">Distance from here - {{proxdetcamp.distance}}</p>
     </div>
 </div>
-<div class="well row">
+
+<div class="detail-cont row">
     <h4 class="text-center">Nodal officer info</h4>
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
