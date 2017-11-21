@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-  .controller('OrgsignupCtrl', function ($scope , $http ) {
+  .controller('OrgsignupCtrl', function ($scope , $http , userservice , $location) {
 
     $scope.validateAndRegister = function () {
       if (!($scope.name && $scope.uname && $scope.contact && $scope.address && $scope.email && $scope.pwd)) {
@@ -25,7 +25,9 @@ angular.module('clientApp')
        $http.post("/organizationsignup" , userdetails).then(function(res){
           if(res.data.msg) { console.log(res.data)
             alert(res.data.msg);
-          }else{
+          }else{ console.log(res.data)
+            userservice.storeInfo(res.data);
+            $location.path("orgdashboard");
 
           }
        },function(err){

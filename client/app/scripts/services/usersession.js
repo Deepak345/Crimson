@@ -8,7 +8,7 @@ angular.module('clientApp')
         storeInfo : function(user){
             currentUser.isLoggedIn = true ;
             currentUser.userid = user.userid ;
-            currentUser.id = user.id ; // the mongodb object id
+            currentUser.id = user._id ; // the mongodb object id
             currentUser.name = user.name ;
             currentUser.contact = user.contact ;
             currentUser.email = user.email ;
