@@ -7,14 +7,14 @@ var OrgModel = require('../models/org');
 
 
 var createOrganization = function( req , res){
-    OrgModel.find({"userid" : req.body.userid } , function(err,doc){
+    OrgModel.findOne({"userid" : req.body.userid } , function(err,doc){
 
-        if(doc.length === 0){
+        if(!doc){
             var newOrganization = new OrgModel(req.body);
             newOrganization.save(function(err , doc){
                 if(err) throw err ;
                 console.log(doc);
-                res.json(req.body);
+                res.json(doc);
             });
         }else{
             console.log("Username already");
@@ -24,6 +24,25 @@ var createOrganization = function( req , res){
     });
 }
 
+var createBank = function(req , res){ console.log(req.body)
+    BankModel.findOne({"userid" : req.body.userid } , function(err , doc){
+
+        //if(err) throw err ;
+
+        if(doc){ 
+            console.log("Username already taken"); 
+            res.json({ "msg" : "User ID already taken"});
+        }else{
+            var newBank = new BankModel(req.body);
+            newBank.save(function(err,doc){
+                if(err) throw err ;
+                res.json(doc);
+            });
+        }
+    });
+}
+
 module.exports = {
-    createOrganization : createOrganization 
+    createOrganization : createOrganization ,
+    createBank : createBank
 }

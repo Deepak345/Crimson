@@ -5,5 +5,5 @@ angular.module('clientApp')
   if(!userservice.checkSession()){
     $location.path("useroptions");
   } 
-  this.text = "organization reg works" ;
+
 });
