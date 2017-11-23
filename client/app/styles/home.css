@@ -1,0 +1,58 @@
+#bk-img {
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    height: 100%;
+    min-width: 70%;
+}
+
+#bdy {
+    background-color: rgba(255, 207, 212, 0.98);
+    opacity: 0.90;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#main-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 55px;
+    color: rgba(255, 0, 0, 0.88);
+    font-family: 'Cinzel Decorative', cursive;
+    text-shadow: 4px 4px 5px #535252;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FF0000;
+    margin: 15px;
+    padding: 10px;
+    min-height: 85px !important;
+}
+
+.link {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 3px 3px 5px #000000;
+}
+
+.tile:hover {
+    box-shadow: 5px 5px 8px black;
+    transition: 0.4s;
+}
+
+.link:hover {
+    text-shadow: 5px 5px 8px black;
+    text-decoration: none !important;
+    color: white !important;
+    transition: 0.4s;
+}
