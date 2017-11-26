@@ -35,6 +35,7 @@ angular.module('clientApp')
                 alert(res.data.msg);
               }else{
                 console.log(res.data);
+                res.data.userType = "Blood Bank" ;
                 userservice.storeInfo(res.data);
                 $location.path("orgdashboard");
               }
