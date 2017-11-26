@@ -14,6 +14,7 @@
     <!-- endbuild -->
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
 
 
     <!-- Google Fonts -->
@@ -24,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kalam|Shrikhand|Merienda+One|Righteous" rel="stylesheet">
 </head>
 
-<body ng-app="clientApp">
+<body ng-app="clientApp" style="height:100%;">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -35,15 +36,12 @@
 
     </div>
 
-    <section class="container" ng-view>
+    <section ng-view style="height:100%;">
+
 
     </section>
 
-    <div class="footer">
-        <div class="container">
-            <p><span class="glyphicon glyphicon-heart"></span> from the illuminati</p>
-        </div>
-    </div>
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -68,23 +66,23 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-        
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src = "scripts/services/usersession.js"></script>
-        <script src = "scripts/services/selectedbank.js"></script>
-        <script src = "scripts/services/locationservice.js"></script>
-        <script src = "scripts/services/resolveservice.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src = "scripts/controllers/useroptions.js"></script>
-        <script src="scripts/controllers/upcomingevents.js"></script>
-        <script src="scripts/controllers/signup.js"></script>
-        <script src="scripts/controllers/sendmails.js"></script>
-        <script src="scripts/controllers/banksignup.js"></script>
-        <script src="scripts/controllers/organizationsignup.js"></script>
-       <!-- <script src="scripts/controllers/regforbank.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/usersession.js"></script>
+    <script src="scripts/services/selectedbank.js"></script>
+    <script src="scripts/services/locationservice.js"></script>
+    <script src="scripts/services/resolveservice.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/useroptions.js"></script>
+    <script src="scripts/controllers/upcomingevents.js"></script>
+    <script src="scripts/controllers/signup.js"></script>
+    <script src="scripts/controllers/sendmails.js"></script>
+    <script src="scripts/controllers/banksignup.js"></script>
+    <script src="scripts/controllers/organizationsignup.js"></script>
+    <!-- <script src="scripts/controllers/regforbank.js"></script>
         <script src="scripts/controllers/regfororg.js"></script>  -->
         <script src="scripts/controllers/proximalbanks.js"></script>
         <script src="scripts/controllers/sharedlink.js"></script>
@@ -97,7 +95,7 @@
         <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <!--  <script src="scripts/app.js"></script>
+    <!--  <script src="scripts/app.js"></script>
     <script src="scripts/services/usersession.js"></script>
     <script src="scripts/services/selectedbank.js"></script>
     <script src="scripts/services/locationservice.js"></script>
@@ -119,7 +117,7 @@
     <script src="scripts/controllers/proximalbanksdetail.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- endbuild -->  
+    <!-- endbuild -->
 
 
 </body>
