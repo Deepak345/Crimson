@@ -105,6 +105,11 @@ angular
                 controller: 'CreatecampCtrl',
                 controllerAs: 'createcamp'
             })
+            .when("/bankdashboard" , {
+                templateUrl : 'views/bankdashboard.html' ,
+                controller : 'BdashCtrl' ,
+                controllerAs : 'bdash'
+            })
             .otherwise({
                 redirectTo: '/'
             });

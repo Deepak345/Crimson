@@ -25,7 +25,8 @@ angular.module('clientApp')
        $http.post("/organizationsignup" , userdetails).then(function(res){
           if(res.data.msg) { console.log(res.data)
             alert(res.data.msg);
-          }else{ console.log(res.data)
+          }else{ console.log(res.data);
+            res.data.userType = "Organization" ;
             userservice.storeInfo(res.data);
             $location.path("orgdashboard");
 
