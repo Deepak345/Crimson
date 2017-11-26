@@ -1,8 +1,11 @@
+* {
+    margin: 0 !important;
+}
+
 #bk-img {
     background-image: url(/images/background.jpg);
     background-size: cover;
     height: 100%;
-    min-width: 70%;
 }
 
 #bdy {
@@ -33,9 +36,10 @@
     justify-content: center;
     text-align: center;
     background-color: #FF0000;
-    margin: 15px;
-    padding: 10px;
+    margin: 15px !important;
+    padding: 50px;
     min-height: 85px !important;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .link {
@@ -46,13 +50,14 @@
 }
 
 .tile:hover {
-    box-shadow: 5px 5px 8px black;
-    transition: 0.4s;
+    box-shadow: 5px 5px 15px #888;
 }
 
 .link:hover {
-    text-shadow: 5px 5px 8px black;
     text-decoration: none !important;
     color: white !important;
-    transition: 0.4s;
+}
+
+.login {
+    padding: 0px !important;
 }

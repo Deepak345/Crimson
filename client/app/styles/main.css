@@ -72,3 +72,18 @@ html {
     margin-top: 20px;
     border: 1px double red;
 }
+
+
+.orgdash {
+    margin: 10% !important;
+    padding: 0 !important;
+    border: 0px !important;
+}
+
+.login-form {
+    margin: 8% 10% 0 10% !important;
+}
+
+.login-form .form-group {
+    margin: 30px !important;
+}
