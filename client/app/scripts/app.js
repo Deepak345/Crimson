@@ -36,6 +36,11 @@ angular
                 controller: 'PostRequestCtrl',
                 controllerAs: 'poreq'
             })
+            .when('/viewrequest', {
+                templateUrl: 'views/viewrequest.html',
+                controller: 'ViewRequestCtrl',
+                controllerAs: 'vireq'
+            })
             .when('/proximalbanks', {
                 templateUrl: 'views/proximalbanks.html',
                 controller: 'ProximalCtrl',
