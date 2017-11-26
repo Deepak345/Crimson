@@ -21,26 +21,24 @@
 </nav>
 <br><br><br>
 
-<form class="form-horizontal">
-    <div class="form-group form-group-sm">
-        <div class="col-sm-2"></div>
-        <label class="control-label col-sm-2" for="name">User Name:</label>
+<form class="form-horizontal login-form">
+    <h2 class="text-center">Login Form</h2><br>
+    <div class="form-group">
+        <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <input type="text" class="form-control" placeholder="Enter username" ng-model="userop.username" />
         </div>
         <div class="col-sm-4"></div>
     </div>
-    <div class="form-group form-group-sm">
-        <div class="col-sm-2"></div>
-        <label class="control-label col-sm-2" for="name">Password:</label>
+    <div class="form-group">
+        <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <input type="password" class="form-control" placeholder="Enter password" ng-model="userop.password" />
         </div>
         <div class="col-sm-4"></div>
     </div>
-    <div class="form-group form-group-sm">
-        <div class="col-sm-2"></div>
-        <label class="control-label col-sm-2" for="userType">User Category:</label>
+    <div class="form-group">
+        <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <select class="form-control" ng-model="userop.userType">
         <option>Organization</option>
@@ -49,8 +47,8 @@
     </div>
     <div class="row">
         <div class="col-sm-5"></div>
-        <button class="button-def col-sm-1" ng-click="userop.userLogin(userop.username,userop.password,userop.usertype)">Log in</button>
-        <a href="#!signup" class="col-sm-2">Register here</a>
+        <button class="btn btn-primary col-sm-1" ng-click="userop.userLogin(userop.username,userop.password,userop.usertype)">Log in</button>
+        <a href="#!signup" class="col-sm-2">Or Register here</a>
         <div class="col-sm-4"></div>
     </div>
 </form>
