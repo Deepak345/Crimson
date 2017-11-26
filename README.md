@@ -17,3 +17,31 @@ them about blood donation camps being organised in their localities, giving
 details about nearby blood banks and in case an individual needs blood, he can
 post it by providing specifications and other users would be notified about the
 same and can contact the person in need.
+
+# How to Run
+
+* Installing packages
+  * Node Modules
+    ```
+    cd client
+    npm install
+    cd ../server
+    npm install
+    ```  
+    
+  * Bower Components
+    ```cd client
+    bower install
+    ```    
+    
+* Running 
+  * Connect to MongoDb server<br>
+    ```
+    sudo service mongod start
+    ```
+  * Starting the node server<br>
+    ```
+    node server/app
+    ```
+
+* Open localhost:3000 in web-browser
