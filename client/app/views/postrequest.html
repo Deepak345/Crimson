@@ -1,6 +1,27 @@
 <link href="../styles/postrequest.css" rel="stylesheet" type="text/css"></link>
 
-
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-background">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand logo" href="#!main">CRIMSON</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!main">Home</a></li>
+                <li><a href="#!useroptions">Conduct a blood Camp</a></li>
+                <li><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
+                <li class="active"><a href="#!proximalbanks">Blood Banks Near You</a></li>
+                <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
 <form class="reqForm text-justify" ng-submit="submit()">
     <h2>Submit A Request</h2><br>
     <h4>Contact Details</h4>
@@ -26,7 +47,7 @@
     <div class="row">
         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <label for="city">Blood Group</label>
-            <select class="form-control"ng-model="reqForm.request.bloodGrp">
+            <select class="form-control" ng-model="reqForm.request.bloodGrp">
                 <option>O+ve</option>
                 <option>O-ve</option>
                 <option>A+ve</option>
