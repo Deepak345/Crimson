@@ -7,7 +7,8 @@ var orgSchema = new Schema({
     password: { type: String },
     address: { type: String },
     contact: { type: String },
-    email: { type: String }
+    email: { type: String },
+    events: [{ type: Schema.Types.ObjectId, ref: 'event' }]
 });
 
 var orgModel = mongoose.model('org', orgSchema);

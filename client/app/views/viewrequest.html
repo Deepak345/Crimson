@@ -1,0 +1,9 @@
+<link href="../styles/viewrequest.css" rel="stylesheet" type="text/css">
+
+<div class="notice" ng-repeat="notice in notices">
+    <p>Blood Group Required : {{ notice.request.bloodGrp }}</p>
+    <p>Blood Quantity Required : {{ notice.request.bloodQuantity }}</p>   
+    <p>Blood Required By : {{ notice.request.dueDate }}</p>   
+    <p>{{ notice.request.content }}</p> 
+    <button class="btn btn-danger" ng-click="donate()">Donate</button>   
+</div>
