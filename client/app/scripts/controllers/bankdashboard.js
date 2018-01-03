@@ -6,4 +6,8 @@ angular.module('clientApp')
     $location.path("useroptions");
   } 
 
+  $scope.logout = function() {
+    userservice.destroySession();
+  }
+
 });

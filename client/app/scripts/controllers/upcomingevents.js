@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('UpcomingeventCtrl', function($scope, $http, $route) {
+    .controller('UpcomingeventCtrl', function($scope, $http, $route , $location) {
         $scope.donor = {
             bloodGrp: "A+ve",
             gender: "Male"
@@ -28,5 +28,5 @@ angular.module('clientApp')
                 }
                 location.reload();
             });
-        };
+        }
     });

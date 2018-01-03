@@ -13,13 +13,14 @@ var options = {
 
 var transport = mailer.createTransport(smtpTransport(options));
 
-// Mail sender code 
 var sendMail = function (req, res) {
     console.log(req.body);
 
+
+    /* The underlying portion has to be kept within call back of getById() to mail the person in need
     var mail = {  // to be set with appropriate req.body attributes
-        from:  req.body.organizer + ' <ramakpatt@gmail.com>'  , // "<" + req.body.organizer + ">" ,   //'ramakpatt@gmail.com',
-        to: 'rkpattnaik780@gmail.com',  // should be set to req.body.to
+        from:  "CRIMSON" + ' <ramakpatt@gmail.com>'  , // "<" + req.body.organizer + ">" ,   //'ramakpatt@gmail.com',
+        to: 'req.bo',  // should be set to req.body.to
         subject: req.body.subject ,
         html: "<p>" + req.body.text + "</p><br><br><p><i>All correspondences should be replied to - </i><b>" + req.body.from + "</b></p>"
     }
@@ -33,9 +34,11 @@ var sendMail = function (req, res) {
         }
     })  
 
+    */
+
 
 }
 
 module.exports = {
-    "sendMail": sendMail
+    "donorInfo": donorInfo
 }

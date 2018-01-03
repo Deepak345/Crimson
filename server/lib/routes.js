@@ -4,7 +4,7 @@ var index = require('../controllers/index');
 var events = require('../controllers/events');
 var registration = require("../controllers/registration");
 var login = require("../controllers/login");
-
+var bankmailer = require("../controllers/notifyall")
 var mailer = require("../controllers/mail");
 
 var notice = require("../controllers/notice");
@@ -25,7 +25,9 @@ router.post("/userlogin" , login.organizationLogin);
 
 router.post("/banklogin" , login.bankLogin);
 
-router.put("/sendemail" , mailer.sendMail);
+router.post("/sendemail" , mailer.sendMail);
+
+router.post("/notifyall" , bankmailer.sendMailToBanks );
 
 router.post('/postrequest', notice.postNotice);
 

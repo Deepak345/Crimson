@@ -46,9 +46,6 @@ angular
                 controller: 'ProximalCtrl',
                 controllerAs: 'proxcamp',
                 resolve : {
-                  /*  mydata : function(resolveservice){
-                       banklist : resolveservice.getList();
-                    } */
 
                     mydata : function(resolveservice) { return resolveservice.getList(); }
 

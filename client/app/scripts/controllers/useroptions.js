@@ -2,6 +2,10 @@
 
 angular.module('clientApp')
   .controller('UseropCtrl', function ($location, userservice, $http) {
+    if(userservice.checkSession()){
+      if(userservice.getUserDetails().userType === "Organization") $location.path("orgdashboard");
+      if(userservice.getUserDetails().userType === "Blood Bank") $location.path("bankdashboard");
+    }
     this.text = "user option works";
     this.userType = "Organization";
     this.userLogin = function (name, pwd, type) {

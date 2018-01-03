@@ -14,7 +14,7 @@
                 <li><a href="#!useroptions">Conduct a blood Camp</a></li>
                 <li><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
                 <li><a href="#!proximalbanks">Blood Banks Near You</a></li>
-                <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#!useroptions" ng-click = "logout()"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
             </ul>
         </div>
     </div>
@@ -51,7 +51,7 @@
 
 <div class="form-group form-group-sm row">
 
-    <label class="col-sm-4">Subject</label>
+    <label class="col-sm-4">Message</label>
     <div class="col-sm-8">
         <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows="6" cols="70">
            

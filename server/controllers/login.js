@@ -16,6 +16,7 @@ var organizationLogin = function (req, res) {
                     "address" : doc.address,
                     "contact" : doc.contact,
                     "email" : doc.email,
+                    "events" : doc.events
                 };
                 res.json(accountDetails);
             } else {

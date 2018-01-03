@@ -14,7 +14,7 @@
                 <li><a href="#!useroptions">Conduct a blood Camp</a></li>
                 <li><a href="#!upcomingevents">Upcoming Blood Camps</a></li>
                 <li><a href="#!proximalbanks">Blood Banks Near You</a></li>
-                <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#!useroptions"><span class="glyphicon glyphicon-log-in" ng-click = "logout()"></span>Logout</a></li>
             </ul>
         </div>
     </div>
@@ -34,9 +34,9 @@
             <a href="#!sendmails" class="col-sm-5"><button class="btn btn-primary">Send mails</button></a>
         </div>
         <br><br>
-        <div class="row">
-            <label class="col-sm-7" style="font-size: 18px;">Click here to see detail of current event</label>
-            <a href="#!orgevents/59f45ae00a03910d9355a7fc" class="col-sm-5"><button class="btn btn-primary">See details</button></a>
+        <div class="row" ng-if="events.length > 0" ng-repeat = "event in events">
+            <label class="col-sm-7" style="font-size: 18px;">Click here to see detail of current event {{$index + 1}}</label>
+            <a href="#!orgevents/{{event}}" class="col-sm-5"><button class="btn btn-primary">See details</button></a>
         </div>
     </div>
     <div class="col-sm-2"></div>
