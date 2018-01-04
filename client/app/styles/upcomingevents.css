@@ -1,0 +1,16 @@
+.panel {
+    margin: 3% !important;
+    box-shadow: 1px 1px 5px #888;
+    border-radius: none !important;
+}
+
+.button-def {
+    margin-top: 2% !important;
+    float: right;
+}
+
+.panel-body ul li {
+    margin-left: none !important;
+    padding: 8px !important;
+}
+

@@ -1,3 +1,5 @@
+<link href="../styles/upcomingevents.css" rel="stylesheet" type="text/css">
+
 <nav class="navbar navbar-default navbar-fixed-top" id="nav-background">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -21,11 +23,10 @@
 </nav>
 <br><br><br>
 
-<div class="container row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-        <div class="panel panel-default" ng-repeat="event in events" style="text-align:center;">
-            <div class="panel-heading" style="margin: auto;">{{ event.name }}</div>
+<div>
+    <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6" ng-repeat="event in events">
+        <div class="panel panel-warning" style="text-align:left;">
+            <div class="panel-heading" style="margin: auto;text-align:center;">{{ event.name }}</div>
             <div class="panel-body">
                 <ul style="list-style-type: none;">
                     <li><b>Venue :</b> {{ event.venue }}</li>
@@ -33,7 +34,7 @@
                     <li><b>Time :</b> {{ event.time }}</li>
                     <li><b>Total Donors Registered :</b> {{ event.donors.length }}</li>
                 </ul>
-                <button class="button-def" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">Register</button>
+                <button class="button-def btn btn-danger" ng-click="saveEvent(event._id)" data-toggle="modal" data-target="#myModal">REGISTER</button>
             </div>
         </div>
     </div>

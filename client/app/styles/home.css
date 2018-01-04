@@ -25,9 +25,9 @@
     text-align: center;
     font-weight: 900;
     font-size: 55px;
-    color: rgba(255, 0, 0, 0.88);
+    color: rgba(255, 0, 0, 1);
     font-family: 'Righteous', cursive;
-    text-shadow: 4px 4px 5px #535252;
+    text-shadow: none;
 }
 
 .tile {
@@ -35,22 +35,23 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.65);
     margin: 15px !important;
     padding: 50px;
     min-height: 85px !important;
-    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 1px 1px 10px #888;
+    transition: box-shadow 0.1s ease-in-out;
+    border-radius: 5px !important;
 }
 
 .link {
     color: white;
     font-size: 22px;
     font-weight: 600;
-    text-shadow: 3px 3px 5px #000000;
 }
 
 .tile:hover {
-    box-shadow: 5px 5px 15px #888;
+    box-shadow: 8px 8px 20px #888;
 }
 
 .link:hover {
@@ -60,4 +61,5 @@
 
 .login {
     padding: 0px !important;
+    
 }
