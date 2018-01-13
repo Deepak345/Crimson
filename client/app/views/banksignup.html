@@ -4,38 +4,38 @@
 <form class="regForm text-justify" ng-submit="submit()">
     <h2>Blood Bank Sign Up</h2><br>
     <div class="row">
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <label for="name">Name</label>
             <input type="text" class="form-control" ng-model="regForm.name">
         </div>
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <label for="contact">Contact</label>
             <input type="text" class="form-control" ng-model="regForm.contact">
         </div>
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <label for="name">UserId</label>
+            <input type="text" class="form-control" ng-model="regForm.userid">
+        </div>        
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <label for="email">Email</label>
             <input type="email" class="form-control" ng-model="regForm.email">
         </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <label for="name">UserId</label>
-            <input type="text" class="form-control" ng-model="regForm.userid">
-        </div>
-        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <label for="contact">Password</label>
             <input type="password" class="form-control" ng-model="regForm.password">
         </div>
     </div>
     <div class="row">
-        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <label for="city">Address</label>
-            <input type="text" class="form-control"ng-model="regForm.address">
+            <textarea rows="5" class="form-control"ng-model="regForm.address"></textarea>
         </div>
         
     </div>
     <div class="row">
-        <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <label for="cat">Category</label>
             <select type="text" class="form-control" ng-model="regForm.category">
                 <option>Public</option>
@@ -44,18 +44,21 @@
         </div>
     </div>
     <div class="row">
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <label for="name">Nodal Officer Name</label>
             <input type="text" class="form-control" ng-model="regForm.nodalOfficerName">
         </div>
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <label for="name">Nodal Officer Number</label>
             <input type="text" class="form-control" ng-model="regForm.nodalOfficerNo">
         </div>
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <label for="name">Nodal Officer Email</label>
             <input type="email" class="form-control" ng-model="regForm.nodalOfficerEmail">
         </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <div class="row">
+        <a style="float:right" href="#!useroptions" class="col-sm-2">Already have an account?</a>
+        <button class="btn btn-primary" type="submit">REGISTER</button>
+    </div>
 </form>
