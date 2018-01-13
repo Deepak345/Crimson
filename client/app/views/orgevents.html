@@ -1,9 +1,27 @@
-<h1>Date - {{event.date}}</h1>
-<h3>Venue - {{event.venue}}</h3>
-<h5>Time - {{event.time}}</h5>
-<h5>Total registrations - {{event.donors.length}}</h5>
+<style>
+    .table {
+        margin: 2% auto !important;
+        max-width: 70%;
+    }
 
-<table class="table table-hover">
+    .eventDetails {
+        text-align: center !important;
+    }
+
+    button {
+        margin: auto !important;
+    }
+</style>
+
+<br>
+<div class="eventDetails">
+    <h3><b>Date</b>: {{event.date}}</h3><br>
+    <h3><b>Venue</b>: {{event.venue}}</h3><br>
+    <h3><b>Time</b>: {{event.time}}</h3><br>
+    <h3><b>Total registrations</b>: {{event.donors.length}}</h3>
+</div>
+
+<table class="table table-striped table-bordered">
     <thead>
         <tr>
             <td>Name</td>
@@ -27,4 +45,4 @@
 
 </table>
 
-<button class="btn btn-danger btn-block" ng-click="notifyAll()">Send Mails</button>
+<button class="btn btn-danger" ng-click="notifyAll()">Send Mails</button>
