@@ -1,3 +1,5 @@
+<link href="../styles/banksignup.css" rel="stylesheet" type="text/css"></link>
+
 <nav class="navbar navbar-default navbar-fixed-top" id="nav-background">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -23,7 +25,39 @@
 
 <div class="col-sm-2"></div>
 <div class="row ng-cloak">
-    <div class="col-sm-6" id="signupbar">
+    <form class="text-justify" id="signupbar">
+        <h2>Create a Blood Donation Camp</h2><br>
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="name">Event Name</label>
+                <input type="text" class="form-control"  name="username" ng-model="event.name">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="contact">Contact</label>
+                <input type="date" class="form-control"  name="date" ng-model="event.date">
+            </div>       
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="name">Venue</label>
+                <input type="text" class="form-control"  name="venue" ng-model="event.venue">
+            </div> 
+            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <label for="email">Time</label>
+                <input type="time" class="form-control"  name="time" ng-model="event.time">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label for="city">Content</label>
+                <textarea rows="10" class="form-control"  name="content" ng-model="event.content"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-danger" type = "submit" ng-click="submit(event)">SUBMIT</button><br>
+        </div>
+    </form>
+    <!--<div class="col-sm-6" id="signupbar">
         <h3 class="text-center">Create a Blood Donation Camp</h3>
         <div class="form-group form-group-sm">
             <label for="name">Name:</label>
@@ -53,8 +87,7 @@
 
         <button class="btn btn-primary btn-block" style="font-size: 18px;" ng-click="submit(event)">Submit</button>
 
-    </div>
+    </div>-->
 
 </div>
-<div class="col-sm-2"></div>
 <br><br>

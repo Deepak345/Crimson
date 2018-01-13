@@ -1,3 +1,5 @@
+<link href="../styles/banksignup.css" rel="stylesheet" type="text/css"></link>
+
 <nav class="navbar navbar-default navbar-fixed-top" id="nav-background">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -23,6 +25,38 @@
 <br>
 <br>
 <br>
+
+<form class="text-justify" ng-submit = "sendMail(selectedOrg.email , subject , content)">
+    <h2>Send Mails</h2><br>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label for="name">Mail List</label>
+            <select ng-model="selectedOrg" ng-options="x.name for x in mailList" class="form-control"></select>       
+        </div>      
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label for="contact">To</label>
+            <input class="form-control" name="to" ng-model = "selectedOrg.email" readonly style="width : 400px" readonly>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label for="name">Subject</label>
+            <input class="form-control" name="subject" ng-model="subject" placeholder="Enter the subject" style="width : 400px">
+        </div> 
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label for="city">Message</label>
+            <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows="6" cols="70"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <button type = "submit" class="btn btn-display btn-danger">SEND</button>
+    </div>
+</form>
+<!--
 <form ng-submit = "sendMail(selectedOrg.email , subject , content)">
 <div class="form-group form-group-sm row">
 
@@ -53,11 +87,9 @@
 
     <label class="col-sm-4">Message</label>
     <div class="col-sm-8">
-        <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows="6" cols="70">
-           
-        </textarea>
+        <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows="6" cols="70"></textarea>
     </div>
 </div>
 
 <button type = "submit" class="btn btn-display">Send mail</button>
-</form>
+</form>-->
