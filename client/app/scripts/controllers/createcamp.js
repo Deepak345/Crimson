@@ -2,9 +2,17 @@
 
 angular.module('clientApp')
 .controller('CreatecampCtrl', function ($location , $scope , $http , userservice) {console.log(userservice.getUserDetails());
-  if(!userservice.checkSession()){
-    $location.path("useroptions");
-  }
+  if (!userservice.checkSession()) {
+    $http.get("/checkloggedin").then(function(res){
+        if(res.data){
+            userservice.storeInfo(res.data);
+        }else{
+            $location.path("useroptions");
+        }    
+    },function(err){
+        console.log(err);   
+    });
+}
   
   $scope.submit = function(event){
     event.conductor = { "typeOf" : userservice.getUserDetails().userType , "details" : userservice.getUserDetails().id};

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-.controller('OrgdashCtrl', function ($location , userservice , $scope) {
+.controller('OrgdashCtrl', function ($location , userservice , $scope , $http) {
   if(!userservice.checkSession()  || userservice.getUserDetails().userType !== "Organization"){ 
     $location.path("useroptions");
   } 
@@ -9,7 +9,13 @@ angular.module('clientApp')
   $scope.events = userservice.getUserDetails().events ;
 
   $scope.logout = function() {
-    userservice.destroySession();
+    $http.delete("/logout").then(function(){console.log("called")
+      userservice.destroySession();
+      $location.path("useroptions");
+    },function(err){
+      console.log(err)
+    });
+    console.log("destroyed")
   }
 
 });

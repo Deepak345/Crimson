@@ -2,6 +2,10 @@ body {
     font-family: 'Comfortaa', cursive !important;
 }
 
+a[ng-click]{
+    cursor: pointer;
+}
+
 .logo {
     font-family: 'Righteous', cursive;
     font-weight: bold;

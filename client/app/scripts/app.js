@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+window.onbeforeunload = function () {return false;}
+
 angular
 
     .module('clientApp', [

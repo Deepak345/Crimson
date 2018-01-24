@@ -17,8 +17,10 @@
   "authors": "nvs16,deepak345,rkpattnaik780",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "mongodb": "^2.2.33",
     "mongoose": "^4.12.4",
     "nodemailer": "^4.4.0",

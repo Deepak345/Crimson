@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema ;
+var bcrypt = require("bcrypt");
 
 var bankSchema = new Schema({
     name : { "type" : String , required : true },
@@ -19,3 +20,13 @@ var bankSchema = new Schema({
 var bankModel = mongoose.model("bank" , bankSchema);
 
 module.exports = bankModel ;
+
+module.exports.saveBank = function(newUser, callback) {
+    bcrypt.genSalt(10, function(err, salt) {
+        bcrypt.hash(newUser.password, salt, function(err, hash) {
+            // Store hash in your password DB.
+            newUser.password = hash;
+            newUser.save(callback);
+        });
+    });
+};

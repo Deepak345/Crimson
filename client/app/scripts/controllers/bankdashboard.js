@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-.controller('BdashCtrl', function ($location , userservice) {
+.controller('BdashCtrl', function ( $scope , $location , userservice) {
   if(!userservice.checkSession() || userservice.getUserDetails().userType !== "Blood Bank"){ 
     $location.path("useroptions");
   } 

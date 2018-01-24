@@ -2,9 +2,16 @@
 
 angular.module('clientApp')
     .controller('SendmailCtrl', function ($http, $scope, $location, userservice) {
-        console.log(userservice.checkSession());
         if (!userservice.checkSession()) {
-            $location.path("useroptions");
+            $http.get("/checkloggedin").then(function(res){
+                if(res.data){
+                    userservice.storeInfo(res.data);
+                }else{
+                    $location.path("useroptions");
+                }    
+            },function(err){
+                console.log(err);   
+            });
         }
 
         var tempArray = [];
@@ -46,11 +53,11 @@ angular.module('clientApp')
                 "organizer": userservice.getUserDetails().name
             }).then(function (res) {
                 console.log(res);
-                if(res.data.response === "Sent"){
-                    $scope.subject = "" ;
-                    $scope.content = "" ;
+                if (res.data.response === "Sent") {
+                    $scope.subject = "";
+                    $scope.content = "";
                     alert("Message has been sent.");
-                }else{
+                } else {
                     alert("Email wasn't sent");
                 }
             }, function (error) {

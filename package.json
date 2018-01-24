@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/rkpattnaik780/crimson/issues"
   },
-  "homepage": "https://github.com/rkpattnaik780/crimson#readme"
+  "homepage": "https://github.com/rkpattnaik780/crimson#readme",
+  "dependencies": {}
 }

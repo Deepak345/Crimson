@@ -6,7 +6,7 @@ var registration = require("../controllers/registration");
 var login = require("../controllers/login");
 var bankmailer = require("../controllers/notifyall")
 var mailer = require("../controllers/mail");
-
+var checkLoggedIn = require("../controllers/checksession");
 var notice = require("../controllers/notice");
 
 router.post('/createevent', events.createNewEvent);
@@ -33,6 +33,9 @@ router.post('/postrequest', notice.postNotice);
 
 router.get('/viewrequest', notice.viewNotice);
 
+router.get("/checkloggedin" , checkLoggedIn.checkSession);
+
+router.get("/logout" , checkLoggedIn.logout);
 
 
 module.exports = router;
