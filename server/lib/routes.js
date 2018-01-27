@@ -8,6 +8,7 @@ var bankmailer = require("../controllers/notifyall")
 var mailer = require("../controllers/mail");
 var checkLoggedIn = require("../controllers/checksession");
 var notice = require("../controllers/notice");
+var verify = require("../controllers/verifymail");
 
 router.post('/createevent', events.createNewEvent);
 
@@ -20,6 +21,8 @@ router.get("/getevent/:id" , events.getAnEvent);
 router.post("/organizationsignup" , registration.createOrganization);
 
 router.post("/registerbank" , registration.createBank);
+
+router.get("/verify" , verify.verifyMail );  // /:code/:type
 
 router.post("/userlogin" , login.organizationLogin);
 
@@ -35,7 +38,7 @@ router.get('/viewrequest', notice.viewNotice);
 
 router.get("/checkloggedin" , checkLoggedIn.checkSession);
 
-router.get("/logout" , checkLoggedIn.logout);
+router.delete("/logout" , checkLoggedIn.logout);
 
 
 module.exports = router;

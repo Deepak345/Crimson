@@ -6,7 +6,7 @@ var OrgModel = require('../models/org');
 var bcrypt = require("bcrypt");
 
 var organizationLogin = function (req, res) {
-    OrgModel.findOne({ "userid": req.body.userid }, function (err, doc) {
+    OrgModel.findOne({ "userid": req.body.userid , "isVerified" : true }, function (err, doc) {
         console.log(doc);
 
         if (err) throw err;
@@ -40,7 +40,7 @@ var organizationLogin = function (req, res) {
 }
 
 var bankLogin = function (req, res) {
-    BankModel.findOne({ "userid": req.body.userid }, function (err, doc) {
+    BankModel.findOne({ "userid": req.body.userid , "isVerified" : true }, function (err, doc) {
         if (err) throw err;
         if (doc) {
             bcrypt.compare(req.body.password, doc.password, function (err, isMatch) {
@@ -55,7 +55,7 @@ var bankLogin = function (req, res) {
                         "contact": doc.contact,
                         "email": doc.email,
                     };
-                    req.session = accountDetails ;
+                    req.session.user = accountDetails ;
                     req.session.user.userType = "Blood Bank"
                     res.json(accountDetails);
                 } else {

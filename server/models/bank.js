@@ -13,7 +13,8 @@ var bankSchema = new Schema({
                   enum : [ "Public" , "Private"]},
     nodalOfficerName : { "type" : String , required : true },
     nodalOfficerNo : { "type" : String , required : true },
-    nodalOfficerEmail : { "type" : String , required : true }
+    nodalOfficerEmail : { "type" : String , required : true },
+    isVerified : { type: Boolean, default: false }
 });
 
 

@@ -18,6 +18,8 @@ var options = {
     }
 };
 
+var transport = mailer.createTransport(smtpTransport(options));
+
 
 var createOrganization = function (req, res) {
     OrgModel.findOne({ "userid": req.body.userid }, function (err, doc) {
@@ -28,12 +30,12 @@ var createOrganization = function (req, res) {
                 if (err) throw err;
                 console.log(doc);
                 bcrypt.genSalt(10, function (err, salt) {
-                    bcrypt.hash(newOrganization.emailid, salt, function (err, hash) {
+                    bcrypt.hash(newOrganization.email, salt, function (err, hash) {
                         console.log("user added");
-                        var link = req.protocol + '://' + req.get('host') + '/api/verify?email=' + newUser.emailid + '&code=' + hash;
+                        var link = req.protocol + '://' + req.get('host') + '/verify' + '?mail=' + newOrganization.email + '&code=' + hash + '&type=org';
                         var mail = {
                             from: "crimson" + ' <ramakpatt@gmail.com>',
-                            to: newUser.emailid,
+                            to: newOrganization.email,
                             subject: "Verification mail",
                             html: "<p>" + "Click on the below link to verify " + link + "</p>"
                         };
@@ -75,9 +77,26 @@ var createBank = function (req, res) {
                 if (err) throw err;
                 console.log(doc);
                 bcrypt.genSalt(10, function (err, salt) {
-                    bcrypt.hash(newBank.emailid, salt, function (err, hash) {
+                    bcrypt.hash(newBank.email, salt, function (err, hash) {
                         console.log("bank added");
-                        res.json({ "message": "succesful" });
+                        var link = req.protocol + '://' + req.get('host') + '/verify' + '?mail=' + newBank.email + '&code=' + hash + '&type=bank';
+                        var mail = {
+                            from: "crimson" + ' <ramakpatt@gmail.com>',
+                            to: newBank.email,
+                            subject: "Verification mail",
+                            html: "<p>" + "Click on the below link to verify " + link + "</p>"
+                        };
+
+                        transport.sendMail(mail, (error, response) => {
+                            transport.close()
+                            if (error) {
+                                console.log(error);
+                                res.json({ "msg": 'Error in sending mail!' });
+                            } else {
+                                console.log("Mail has been sent")
+                                res.json({ "msg": 'A mail has been sent to you for verification' });
+                            }
+                        });
                     });
                 });
             });

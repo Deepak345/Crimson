@@ -9,7 +9,8 @@ var orgSchema = new Schema({
     address: { type: String },
     contact: { type: String },
     email: { type: String },
-    events: [{ type: Schema.Types.ObjectId, ref: 'event' }]
+    events: [{ type: Schema.Types.ObjectId, ref: 'event' }],
+    isVerified : { type: Boolean, default: false }
 });
 
 var orgModel = mongoose.model('org', orgSchema);
