@@ -1,0 +1,68 @@
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-background">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#!main">CRIMSON</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active">
+                    <a href="#!main">Home</a>
+                </li>
+                <li>
+                    <a href="#!useroptions">Conduct a blood Camp</a>
+                </li>
+                <li>
+                    <a href="#!upcomingevents">Upcoming Blood Camps</a>
+                </li>
+                <li>
+                    <a href="#!proximalbanks">Blood Banks Near You</a>
+                </li>
+                <li>
+                    <a href="#!useroptions" ng-click="logout()">
+                        <span class="glyphicon glyphicon-log-in"></span>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+
+<form class="text-justify" ng-submit="sendMail(selectedOrg.email , subject , content)">
+    <h2>Send Mails</h2>
+    <br>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label for="name">Mail List</label>
+            <select ng-model="selectedOrg" ng-options="x.name for x in mailList" class="form-control"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label for="contact">To</label>
+            <input class="form-control" name="to" ng-model="selectedOrg.email" readonly style="width : 400px" readonly>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label for="name">Subject</label>
+            <input class="form-control" name="subject" ng-model="subject" placeholder="Enter the subject" style="width : 400px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <label for="city">Message</label>
+            <textarea class="form-control" placeholder="Enter the content" ng-model="content" name="content" rows="6" cols="70"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-display btn-danger">SEND</button>
+    </div>
+</form>
