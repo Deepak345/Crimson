@@ -19,3 +19,14 @@ h2 {
 button {
     float: right;
 }
+
+@media screen and (max-width: 700px)
+{
+    form {
+        border: 1px solid #ccc;
+        padding: 20px !important;
+        border-radius: 7px;
+        margin: 2% !important;
+        box-shadow: 5px 5px 10px #ddd;
+    }
+}

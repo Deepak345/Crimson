@@ -24,7 +24,7 @@
 <br><br><br>
 
 <div>
-    <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-6" ng-repeat="event in events">
+    <div class=" col-lg-4 col-md-42 col-xs-12" ng-repeat="event in events">
         <div class="panel panel-warning" style="text-align:left;">
             <div class="panel-heading" style="margin: auto;text-align:center;">{{ event.name }}</div>
             <div class="panel-body">
@@ -52,52 +52,42 @@
                 <h4 class="modal-title">Registration</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" ng-submit="register()">
-                    <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-1" for="name">Name:</label>
-                        <div class="col-sm-7">
-                            <input type="name" class="form-control" id="name" ng-model="donor.name" placeholder="Enter name">
-                        </div>
+                <form ng-submit="register()">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="name" class="form-control" id="name" ng-model="donor.name" placeholder="Enter name">
                     </div>
-                    <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-1" for="email">Email:</label>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" id="email" ng-model="donor.email" placeholder="Enter email" required>
-                        </div>
-                        <div class="col-sm-1"></div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" ng-model="donor.email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-sm-2" for="contact">Contact No.:</label>
-                        <div class="col-sm-3">
-                            <input type="contact" class="form-control" id="contact" ng-model="donor.contact" placeholder="Enter Contact No.">
+                        <input type="contact" class="form-control" id="contact" ng-model="donor.contact" placeholder="Enter Contact No.">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <div ng-model="donor.gender">
+                            <input type="checkbox" value="male">Male
+                            <input type="checkbox" value="female">Female
+                            <input type="checkbox" value="other">Other
                         </div>
                     </div>
-                    <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-1" for="gender">Gender:</label>
-                        <div class="col-sm-7" ng-model="donor.gender">
-                            <label class="checkbox-inline"><input type="checkbox" value="male">Male</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="female">Female</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="other">Other</label>
-                        </div>
-                    </div>
-                    <div class="form-group form-group-sm">
-                        <label class="control-label col-sm-1" for="age">Age:</label>
-                        <div class="col-sm-4">
-                            <input type="age" class="form-control" id="age" ng-model="donor.age" placeholder="Enter age">
-                        </div>
-                        <div class="col-sm-1"></div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="age" class="form-control" id="age" ng-model="donor.age" placeholder="Enter age">
                         <label class="control-label col-sm-2 text-left" for="bloodgroup">Blood Group:</label>
-                        <div class="col-sm-3">
-                            <div class="form-group form-group-sm">
-                                <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
-                                        <option>A+ve</option>
-                                        <option>B+ve</option>
-                                        <option>AB+ve</option>
-                                        <option>O+ve</option>
-                                        <option>A-ve</option>
-                                        <option>B-ve</option>
-                                        <option>AB-ve</option>
-                                        <option>O-ve</option>
-                                    </select>
-                            </div>
+                        <div class="form-group">
+                            <select class="form-control" id="bloodgroup" ng-model="donor.bloodGrp">
+                                <option>A+ve</option>
+                                <option>B+ve</option>
+                                <option>AB+ve</option>
+                                <option>O+ve</option>
+                                <option>A-ve</option>
+                                <option>B-ve</option>
+                                <option>AB-ve</option>
+                                <option>O-ve</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
